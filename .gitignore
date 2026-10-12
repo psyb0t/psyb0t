@@ -1,0 +1,6 @@
+.logs/
+preview.html
+__pycache__/
+.shots/
+git-update.sh
+.telemetry/

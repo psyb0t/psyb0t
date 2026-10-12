@@ -1,16 +1,14 @@
-## Hi there 👋
+<!-- top-repos:start -->
+<a href="https://github.com/psyb0t/piraterf"><picture><source media="(prefers-color-scheme: dark)" srcset="cards/piraterf-dark.svg"><img alt="piraterf" src="cards/piraterf-light.svg" width="49%"></picture></a> <a href="https://github.com/psyb0t/docker-stealthy-auto-browse"><picture><source media="(prefers-color-scheme: dark)" srcset="cards/docker-stealthy-auto-browse-dark.svg"><img alt="docker-stealthy-auto-browse" src="cards/docker-stealthy-auto-browse-light.svg" width="49%"></picture></a>
+<a href="https://github.com/psyb0t/offgrid-tools"><picture><source media="(prefers-color-scheme: dark)" srcset="cards/offgrid-tools-dark.svg"><img alt="offgrid-tools" src="cards/offgrid-tools-light.svg" width="49%"></picture></a> <a href="https://github.com/psyb0t/safe-stremio"><picture><source media="(prefers-color-scheme: dark)" srcset="cards/safe-stremio-dark.svg"><img alt="safe-stremio" src="cards/safe-stremio-light.svg" width="49%"></picture></a>
+<a href="https://github.com/psyb0t/mt5-httpapi"><picture><source media="(prefers-color-scheme: dark)" srcset="cards/mt5-httpapi-dark.svg"><img alt="mt5-httpapi" src="cards/mt5-httpapi-light.svg" width="49%"></picture></a> <a href="https://github.com/psyb0t/docker-claudebox"><picture><source media="(prefers-color-scheme: dark)" srcset="cards/docker-claudebox-dark.svg"><img alt="docker-claudebox" src="cards/docker-claudebox-light.svg" width="49%"></picture></a>
+<a href="https://github.com/psyb0t/docker-planesnitch"><picture><source media="(prefers-color-scheme: dark)" srcset="cards/docker-planesnitch-dark.svg"><img alt="docker-planesnitch" src="cards/docker-planesnitch-light.svg" width="49%"></picture></a> <a href="https://github.com/psyb0t/aigate"><picture><source media="(prefers-color-scheme: dark)" srcset="cards/aigate-dark.svg"><img alt="aigate" src="cards/aigate-light.svg" width="49%"></picture></a>
+<a href="https://github.com/psyb0t/persistent-sshfs"><picture><source media="(prefers-color-scheme: dark)" srcset="cards/persistent-sshfs-dark.svg"><img alt="persistent-sshfs" src="cards/persistent-sshfs-light.svg" width="49%"></picture></a> <a href="https://github.com/psyb0t/ssh-tunnel-swarm"><picture><source media="(prefers-color-scheme: dark)" srcset="cards/ssh-tunnel-swarm-dark.svg"><img alt="ssh-tunnel-swarm" src="cards/ssh-tunnel-swarm-light.svg" width="49%"></picture></a>
+<a href="https://github.com/psyb0t/uzdabrawza"><picture><source media="(prefers-color-scheme: dark)" srcset="cards/uzdabrawza-dark.svg"><img alt="uzdabrawza" src="cards/uzdabrawza-light.svg" width="49%"></picture></a> <a href="https://github.com/psyb0t/safe-stremio-web"><picture><source media="(prefers-color-scheme: dark)" srcset="cards/safe-stremio-web-dark.svg"><img alt="safe-stremio-web" src="cards/safe-stremio-web-light.svg" width="49%"></picture></a>
+<!-- top-repos:end -->
 
-<!--
-**psyb0t/psyb0t** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<!-- history:start -->
+<picture><source media="(prefers-color-scheme: dark)" srcset="charts/stars-dark.svg"><img alt="Stars over time" src="charts/stars-light.svg" width="100%"></picture>
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<picture><source media="(prefers-color-scheme: dark)" srcset="charts/followers-dark.svg"><img alt="Followers over time" src="charts/followers-light.svg" width="100%"></picture>
+<!-- history:end -->
