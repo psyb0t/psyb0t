@@ -1,16 +1,15 @@
-"""Regenerate the profile README: top repos by stars, star and follower history.
+"""Regenerate the profile README: top repos by stars and the star history.
 
 Run from anywhere; paths resolve from the repository root. Reads GITHUB_TOKEN
 when set (the Actions token is enough, everything read here is public). Writes
-cards/*.svg, charts/*.svg, data/followers.csv and the marked sections of
-README.md. With --preview it also writes preview.html, a local mock of the
-profile README box in both themes.
+cards/*.svg, charts/*.svg and the marked sections of README.md. With --preview
+it also writes preview.html, a local mock of the profile README box in both
+themes.
 """
 
 from __future__ import annotations
 
 import argparse
-import csv
 import datetime as dt
 import json
 import logging
@@ -40,7 +39,6 @@ TOP_N = 12
 ROOT = Path(__file__).resolve().parent.parent
 CARDS_DIR = ROOT / "cards"
 CHARTS_DIR = ROOT / "charts"
-FOLLOWERS_CSV = ROOT / "data" / "followers.csv"
 README = ROOT / "README.md"
 PREVIEW = ROOT / "preview.html"
 LOG_FILE = ROOT / ".logs" / "update.log"
@@ -522,24 +520,6 @@ def cumulative(dates: list[dt.date]) -> list[tuple[dt.date, int]]:
     return points
 
 
-def record_followers(count: int, today: dt.date) -> list[tuple[dt.date, int]]:
-    """Upsert today's follower count; the API keeps no history, so this file is it."""
-    rows: dict[dt.date, int] = {}
-    if FOLLOWERS_CSV.exists():
-        with FOLLOWERS_CSV.open(newline="", encoding="utf-8") as f:
-            for row in csv.DictReader(f):
-                rows[dt.date.fromisoformat(row["date"])] = int(row["followers"])
-    rows[today] = count
-    FOLLOWERS_CSV.parent.mkdir(exist_ok=True)
-    with FOLLOWERS_CSV.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f, lineterminator="\n")
-        writer.writerow(["date", "followers"])
-        for day in sorted(rows):
-            writer.writerow([day.isoformat(), rows[day]])
-    logger.info("followers recorded", extra={"followers": count, "days": len(rows)})
-    return sorted(rows.items())
-
-
 def grid_step(max_value: int) -> int:
     for step in CHART_GRID_STEPS:
         if max_value / step <= CHART_MAX_GRID_LINES:
@@ -562,12 +542,10 @@ def render_chart(title: str, points: list[tuple[dt.date, int]], theme: str) -> s
         fill=colors["fg"],
     )
     if len(points) < 2:
-        since = points[0][0].isoformat() if points else "today"
-        value = points[0][1] if points else 0
         svg(
             root,
             "text",
-            f"{value:,} today. Tracked daily since {since}, the line starts tomorrow.",
+            "Not enough history to draw a line yet.",
             x=CHART_W / 2,
             y=CHART_H / 2 + 8,
             font_size=FONT_SIZE_TEXT,
@@ -667,18 +645,14 @@ def render_plot(
     )
 
 
-def write_charts(stars: list[tuple[dt.date, int]], followers: list[tuple[dt.date, int]]) -> None:
+def write_charts(stars: list[tuple[dt.date, int]]) -> None:
     CHARTS_DIR.mkdir(exist_ok=True)
     for theme in THEMES:
         (CHARTS_DIR / f"stars-{theme}.svg").write_text(
             render_chart("Stars over time", stars, theme),
             encoding="utf-8",
         )
-        (CHARTS_DIR / f"followers-{theme}.svg").write_text(
-            render_chart("Followers over time", followers, theme),
-            encoding="utf-8",
-        )
-    logger.info("charts written", extra={"star_days": len(stars), "follower_days": len(followers)})
+    logger.info("charts written", extra={"star_days": len(stars)})
 
 
 def picture(name: str, folder: str, alt: str, width: str, href: str | None = None) -> str:
@@ -705,10 +679,7 @@ def repos_section(repos: list[Repo]) -> str:
 
 
 def history_section() -> str:
-    return "\n\n".join(
-        picture(name, "charts", alt, CHART_IMG_WIDTH)
-        for name, alt in (("stars", "Stars over time"), ("followers", "Followers over time"))
-    )
+    return picture("stars", "charts", "Stars over time", CHART_IMG_WIDTH)
 
 
 def replace_between(text: str, start: str, end: str, body: str) -> str:
@@ -761,12 +732,11 @@ def write_preview(user: str, repos: list[Repo]) -> None:
                 "img",
                 {"src": f"cards/{repo.name}-{theme}.svg", "style": "width:49%;margin:0 0.5% 4px 0"},
             )
-        for name in ("stars", "followers"):
-            ET.SubElement(
-                content,
-                "img",
-                {"src": f"charts/{name}-{theme}.svg", "style": "width:100%;margin-top:12px"},
-            )
+        ET.SubElement(
+            content,
+            "img",
+            {"src": f"charts/stars-{theme}.svg", "style": "width:100%;margin-top:12px"},
+        )
     html_text = "<!doctype html>" + ET.tostring(page, encoding="unicode", method="html")
     PREVIEW.write_text(html_text, encoding="utf-8")
     logger.info("preview written", extra={"path": str(PREVIEW.relative_to(ROOT))})
@@ -779,17 +749,14 @@ def main() -> None:
     configure_logging()
 
     user = os.environ.get(ENV_USER, DEFAULT_USER)
-    today = dt.datetime.now(dt.timezone.utc).date()
     logger.info("update started", extra={"user": user, "authenticated": ENV_TOKEN in os.environ})
 
     repos = fetch_repos(user)
     top = top_repos(repos)
     write_cards(top)
 
-    profile = api_get(f"/users/{user}")
-    followers = record_followers(int(profile["followers"]), today)
     stars = cumulative(fetch_star_dates(user, repos))
-    write_charts(stars, followers)
+    write_charts(stars)
     write_readme(top)
     if args.preview:
         write_preview(user, top)

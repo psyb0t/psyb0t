@@ -9,6 +9,4 @@
 
 <!-- history:start -->
 <picture><source media="(prefers-color-scheme: dark)" srcset="charts/stars-dark.svg"><img alt="Stars over time" src="charts/stars-light.svg" width="100%"></picture>
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="charts/followers-dark.svg"><img alt="Followers over time" src="charts/followers-light.svg" width="100%"></picture>
 <!-- history:end -->

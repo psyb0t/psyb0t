@@ -29,7 +29,7 @@ jobs:
 
       - name: Commit when anything changed
         run: |
-          git add README.md cards charts data
+          git add -A README.md cards charts
           if git diff --cached --quiet; then
             echo "nothing changed"
             exit 0
