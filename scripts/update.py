@@ -1,10 +1,9 @@
-"""Regenerate the profile README: top repos by stars and the star history.
+"""Regenerate the profile README: the top repos by stars, as pinned-style cards.
 
 Run from anywhere; paths resolve from the repository root. Reads GITHUB_TOKEN
 when set (the Actions token is enough, everything read here is public). Writes
-cards/*.svg, charts/*.svg and the marked sections of README.md. With --preview
-it also writes preview.html, a local mock of the profile README box in both
-themes.
+cards/*.svg and the marked section of README.md. With --preview it also writes
+preview.html, a local mock of the profile README box in both themes.
 """
 
 from __future__ import annotations
@@ -28,7 +27,6 @@ logger = logging.getLogger(__name__)
 
 API = "https://api.github.com"
 ACCEPT_JSON = "application/vnd.github+json"
-ACCEPT_STARS = "application/vnd.github.star+json"
 HTTP_TIMEOUT_SECONDS = 30
 PER_PAGE = 100
 ENV_TOKEN = "GITHUB_TOKEN"
@@ -38,7 +36,6 @@ TOP_N = 12
 
 ROOT = Path(__file__).resolve().parent.parent
 CARDS_DIR = ROOT / "cards"
-CHARTS_DIR = ROOT / "charts"
 README = ROOT / "README.md"
 PREVIEW = ROOT / "preview.html"
 LOG_FILE = ROOT / ".logs" / "update.log"
@@ -47,14 +44,11 @@ LOG_BACKUPS = 3
 
 REPOS_START = "<!-- top-repos:start -->"
 REPOS_END = "<!-- top-repos:end -->"
-HISTORY_START = "<!-- history:start -->"
-HISTORY_END = "<!-- history:end -->"
 
 SVG_NS = "http://www.w3.org/2000/svg"
 FONT = '-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif'
 FONT_SIZE_NAME = 14
 FONT_SIZE_TEXT = 12
-FONT_SIZE_AXIS = 11
 ELLIPSIS = "…"
 
 # Card geometry: two cards side by side fill the README column at about 1:1.
@@ -75,18 +69,6 @@ LABEL_PAD_X = 7
 LANGUAGE_DOT_R = 6
 FOOTER_ITEM_GAP = 16
 CARD_IMG_WIDTH = "49%"
-
-CHART_W = 848
-CHART_H = 240
-CHART_MARGIN_LEFT = 48
-CHART_MARGIN_RIGHT = 16
-CHART_MARGIN_TOP = 44
-CHART_MARGIN_BOTTOM = 32
-CHART_FILL_OPACITY = "0.12"
-CHART_GRID_STEPS = (1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1000, 2000, 5000, 10000)
-CHART_MAX_GRID_LINES = 5
-CHART_IMG_WIDTH = "100%"
-STARS_CHART_TITLE = "Stars over time"
 
 THEME_LIGHT = "light"
 THEME_DARK = "dark"
@@ -495,167 +477,6 @@ def write_cards(repos: list[Repo]) -> None:
     )
 
 
-def fetch_star_dates(user: str, repos: list[Repo]) -> list[dt.date]:
-    dates: list[dt.date] = []
-    for repo in repos:
-        if repo.is_fork or repo.stars == 0:
-            continue
-        stargazers = api_get(
-            f"/repos/{user}/{repo.name}/stargazers?per_page={PER_PAGE}",
-            accept=ACCEPT_STARS,
-        )
-        logger.debug("stargazers fetched", extra={"repo": repo.name, "count": len(stargazers)})
-        dates.extend(dt.datetime.fromisoformat(s["starred_at"]).date() for s in stargazers)
-    dates.sort()
-    logger.info("star history fetched", extra={"stars": len(dates)})
-    return dates
-
-
-def cumulative(dates: list[dt.date]) -> list[tuple[dt.date, int]]:
-    points: list[tuple[dt.date, int]] = []
-    for count, day in enumerate(dates, start=1):
-        if points and points[-1][0] == day:
-            points[-1] = (day, count)
-            continue
-        points.append((day, count))
-    return points
-
-
-def grid_step(max_value: int) -> int:
-    for step in CHART_GRID_STEPS:
-        if max_value / step <= CHART_MAX_GRID_LINES:
-            return step
-    return CHART_GRID_STEPS[-1]
-
-
-def render_chart(title: str, points: list[tuple[dt.date, int]], theme: str) -> str:
-    colors = THEMES[theme]
-    root = svg_root(CHART_W, CHART_H)
-    frame(root, CHART_W, CHART_H, colors)
-    svg(
-        root,
-        "text",
-        title,
-        x=PAD,
-        y=26,
-        font_size=FONT_SIZE_NAME,
-        font_weight=600,
-        fill=colors["fg"],
-    )
-    if len(points) < 2:
-        svg(
-            root,
-            "text",
-            "Not enough history to draw a line yet.",
-            x=CHART_W / 2,
-            y=CHART_H / 2 + 8,
-            font_size=FONT_SIZE_TEXT,
-            text_anchor="middle",
-            fill=colors["muted"],
-        )
-        return ET.tostring(root, encoding="unicode")
-
-    svg(
-        root,
-        "text",
-        f"{points[-1][1]:,}",
-        x=CHART_W - PAD,
-        y=26,
-        font_size=FONT_SIZE_NAME,
-        font_weight=600,
-        text_anchor="end",
-        fill=colors["fg"],
-    )
-    render_plot(root, points, colors)
-    return ET.tostring(root, encoding="unicode")
-
-
-def render_plot(
-    root: ET.Element, points: list[tuple[dt.date, int]], colors: dict[str, str]
-) -> None:
-    plot_w = CHART_W - CHART_MARGIN_LEFT - CHART_MARGIN_RIGHT
-    plot_h = CHART_H - CHART_MARGIN_TOP - CHART_MARGIN_BOTTOM
-    base = CHART_MARGIN_TOP + plot_h
-    first, last = points[0][0], points[-1][0]
-    days = max((last - first).days, 1)
-    max_value = max(value for _, value in points)
-    step = grid_step(max_value)
-    y_max = -(-max_value // step) * step
-
-    def px(day: dt.date) -> float:
-        return CHART_MARGIN_LEFT + (day - first).days / days * plot_w
-
-    def py(value: int) -> float:
-        return base - value / y_max * plot_h
-
-    for value in range(0, y_max + 1, step):
-        y = f"{py(value):.1f}"
-        svg(
-            root,
-            "line",
-            x1=CHART_MARGIN_LEFT,
-            y1=y,
-            x2=CHART_W - CHART_MARGIN_RIGHT,
-            y2=y,
-            stroke=colors["border"],
-            stroke_dasharray="2 3",
-        )
-        svg(
-            root,
-            "text",
-            f"{value:,}",
-            x=CHART_MARGIN_LEFT - 8,
-            y=f"{py(value) + 4:.1f}",
-            font_size=FONT_SIZE_AXIS,
-            text_anchor="end",
-            fill=colors["muted"],
-        )
-    for year in range(first.year + 1, last.year + 1):
-        svg(
-            root,
-            "text",
-            str(year),
-            x=f"{px(dt.date(year, 1, 1)):.1f}",
-            y=CHART_H - 12,
-            font_size=FONT_SIZE_AXIS,
-            text_anchor="middle",
-            fill=colors["muted"],
-        )
-
-    # Step line: a count holds until the day it changes.
-    coords = [(px(first), py(points[0][1]))]
-    for (_, previous), (day, value) in zip(points, points[1:]):
-        coords.append((px(day), py(previous)))
-        coords.append((px(day), py(value)))
-    line = " ".join(f"{x:.1f},{y:.1f}" for x, y in coords)
-    svg(
-        root,
-        "polygon",
-        points=f"{CHART_MARGIN_LEFT},{base} {line} {px(last):.1f},{base}",
-        fill=colors["link"],
-        fill_opacity=CHART_FILL_OPACITY,
-    )
-    svg(
-        root,
-        "polyline",
-        points=line,
-        fill="none",
-        stroke=colors["link"],
-        stroke_width=2,
-        stroke_linejoin="round",
-    )
-
-
-def write_charts(stars: list[tuple[dt.date, int]]) -> None:
-    CHARTS_DIR.mkdir(exist_ok=True)
-    for theme in THEMES:
-        (CHARTS_DIR / f"stars-{theme}.svg").write_text(
-            render_chart(STARS_CHART_TITLE, stars, theme),
-            encoding="utf-8",
-        )
-    logger.info("charts written", extra={"star_days": len(stars)})
-
-
 def picture(name: str, folder: str, alt: str, width: str, href: str | None = None) -> str:
     """A <picture> that GitHub swaps between the light and dark SVG by viewer theme."""
     element = ET.Element("picture")
@@ -692,13 +513,6 @@ def repos_section(repos: list[Repo]) -> str:
     return "\n".join(" ".join(cards[i : i + 2]) for i in range(0, len(cards), 2))
 
 
-def history_section(stars: list[tuple[dt.date, int]]) -> str:
-    alt = STARS_CHART_TITLE
-    if stars:
-        alt = f"{STARS_CHART_TITLE}: {stars[-1][1]:,} stars since {stars[0][0].isoformat()}"
-    return picture("stars", "charts", alt, CHART_IMG_WIDTH)
-
-
 def replace_between(text: str, start: str, end: str, body: str) -> str:
     block = f"{start}\n{body}\n{end}"
     if start in text and end in text:
@@ -707,16 +521,15 @@ def replace_between(text: str, start: str, end: str, body: str) -> str:
     return f"{text.rstrip()}\n\n{block}\n"
 
 
-def write_readme(repos: list[Repo], stars: list[tuple[dt.date, int]]) -> None:
+def write_readme(repos: list[Repo]) -> None:
     text = README.read_text(encoding="utf-8") if README.exists() else ""
     text = replace_between(text, REPOS_START, REPOS_END, repos_section(repos))
-    text = replace_between(text, HISTORY_START, HISTORY_END, history_section(stars))
     README.write_text(text.lstrip(), encoding="utf-8")
     logger.info("readme written", extra={"path": str(README.relative_to(ROOT))})
 
 
 def write_preview(user: str, repos: list[Repo]) -> None:
-    """Frame the cards and charts the way the profile README box does, both themes."""
+    """Frame the cards the way the profile README box does, in both themes."""
     page = ET.Element("html")
     head = ET.SubElement(page, "head")
     ET.SubElement(head, "meta", {"charset": "utf-8"})
@@ -749,11 +562,6 @@ def write_preview(user: str, repos: list[Repo]) -> None:
                 "img",
                 {"src": f"cards/{repo.name}-{theme}.svg", "style": "width:49%;margin:0 0.5% 4px 0"},
             )
-        ET.SubElement(
-            content,
-            "img",
-            {"src": f"charts/stars-{theme}.svg", "style": "width:100%;margin-top:12px"},
-        )
     html_text = "<!doctype html>" + ET.tostring(page, encoding="unicode", method="html")
     PREVIEW.write_text(html_text, encoding="utf-8")
     logger.info("preview written", extra={"path": str(PREVIEW.relative_to(ROOT))})
@@ -771,13 +579,10 @@ def main() -> None:
     repos = fetch_repos(user)
     top = top_repos(repos)
     write_cards(top)
-
-    stars = cumulative(fetch_star_dates(user, repos))
-    write_charts(stars)
-    write_readme(top, stars)
+    write_readme(top)
     if args.preview:
         write_preview(user, top)
-    logger.info("update finished", extra={"top": len(top), "stars": stars[-1][1] if stars else 0})
+    logger.info("update finished", extra={"top": len(top)})
 
 
 if __name__ == "__main__":
