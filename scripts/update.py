@@ -86,6 +86,7 @@ CHART_FILL_OPACITY = "0.12"
 CHART_GRID_STEPS = (1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1000, 2000, 5000, 10000)
 CHART_MAX_GRID_LINES = 5
 CHART_IMG_WIDTH = "100%"
+STARS_CHART_TITLE = "Stars over time"
 
 THEME_LIGHT = "light"
 THEME_DARK = "dark"
@@ -649,7 +650,7 @@ def write_charts(stars: list[tuple[dt.date, int]]) -> None:
     CHARTS_DIR.mkdir(exist_ok=True)
     for theme in THEMES:
         (CHARTS_DIR / f"stars-{theme}.svg").write_text(
-            render_chart("Stars over time", stars, theme),
+            render_chart(STARS_CHART_TITLE, stars, theme),
             encoding="utf-8",
         )
     logger.info("charts written", extra={"star_days": len(stars)})
@@ -673,13 +674,29 @@ def picture(name: str, folder: str, alt: str, width: str, href: str | None = Non
     return ET.tostring(element, encoding="unicode", method="html")
 
 
+def count_noun(count: int, noun: str) -> str:
+    return f"{count:,} {noun}" if count == 1 else f"{count:,} {noun}s"
+
+
+def card_alt(repo: Repo) -> str:
+    """Everything the card draws, as text, for screen readers and text-only agents."""
+    facts = [repo.language] if repo.language else []
+    facts += [count_noun(repo.stars, "star"), count_noun(repo.forks, "fork")]
+    if not repo.description:
+        return f"{repo.name} ({', '.join(facts)})"
+    return f"{repo.name}: {repo.description.strip()} ({', '.join(facts)})"
+
+
 def repos_section(repos: list[Repo]) -> str:
-    cards = [picture(r.name, "cards", r.name, CARD_IMG_WIDTH, r.url) for r in repos]
+    cards = [picture(r.name, "cards", card_alt(r), CARD_IMG_WIDTH, r.url) for r in repos]
     return "\n".join(" ".join(cards[i : i + 2]) for i in range(0, len(cards), 2))
 
 
-def history_section() -> str:
-    return picture("stars", "charts", "Stars over time", CHART_IMG_WIDTH)
+def history_section(stars: list[tuple[dt.date, int]]) -> str:
+    alt = STARS_CHART_TITLE
+    if stars:
+        alt = f"{STARS_CHART_TITLE}: {stars[-1][1]:,} stars since {stars[0][0].isoformat()}"
+    return picture("stars", "charts", alt, CHART_IMG_WIDTH)
 
 
 def replace_between(text: str, start: str, end: str, body: str) -> str:
@@ -690,10 +707,10 @@ def replace_between(text: str, start: str, end: str, body: str) -> str:
     return f"{text.rstrip()}\n\n{block}\n"
 
 
-def write_readme(repos: list[Repo]) -> None:
+def write_readme(repos: list[Repo], stars: list[tuple[dt.date, int]]) -> None:
     text = README.read_text(encoding="utf-8") if README.exists() else ""
     text = replace_between(text, REPOS_START, REPOS_END, repos_section(repos))
-    text = replace_between(text, HISTORY_START, HISTORY_END, history_section())
+    text = replace_between(text, HISTORY_START, HISTORY_END, history_section(stars))
     README.write_text(text.lstrip(), encoding="utf-8")
     logger.info("readme written", extra={"path": str(README.relative_to(ROOT))})
 
@@ -757,7 +774,7 @@ def main() -> None:
 
     stars = cumulative(fetch_star_dates(user, repos))
     write_charts(stars)
-    write_readme(top)
+    write_readme(top, stars)
     if args.preview:
         write_preview(user, top)
     logger.info("update finished", extra={"top": len(top), "stars": stars[-1][1] if stars else 0})
