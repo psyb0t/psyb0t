@@ -50,28 +50,31 @@
 ### API clients
 
 - [go-spamcheck](https://github.com/psyb0t/go-spamcheck) · Go · ★ 2: Tiny Go client for Postmark's SpamCheck API: submit a raw email, get its SpamAssassin spam score and matched-rule breakdown. No account or API key required.
-- [go-cerebras](https://github.com/psyb0t/go-cerebras): Unofficial Go client for the Cerebras Inference API, generated from the official OpenAPI spec.
-- [go-contextual-ai](https://github.com/psyb0t/go-contextual-ai): Unofficial Go client for the Contextual AI API, generated from the official OpenAPI spec.
+- [go-cerebras](https://github.com/psyb0t/go-cerebras) · Shell: Unofficial Go client for the Cerebras Inference API, generated from the official OpenAPI spec.
+- [go-contextual-ai](https://github.com/psyb0t/go-contextual-ai) · Shell: Unofficial Go client for the Contextual AI API, generated from the official OpenAPI spec.
 - [go-elevenlabs](https://github.com/psyb0t/go-elevenlabs) · Shell: Unofficial Go client for the ElevenLabs API, generated from the official OpenAPI spec.
 - [go-etoro](https://github.com/psyb0t/go-etoro) · Shell: Unofficial Go clients for the eToro public REST and WebSocket APIs, generated from eToro's OpenAPI and AsyncAPI specs.
 - [go-exa](https://github.com/psyb0t/go-exa) · Shell: Unofficial Go client for the Exa search API, generated from the official OpenAPI spec.
 - [go-fireworks](https://github.com/psyb0t/go-fireworks) · Shell: Unofficial Go client for the Fireworks AI API, generated from the official OpenAPI spec.
 - [go-hubspot](https://github.com/psyb0t/go-hubspot) · Shell: Unofficial Go client for the HubSpot API, generated from the official OpenAPI spec.
 - [go-ibkr](https://github.com/psyb0t/go-ibkr) · Shell: Unofficial Go client for the Interactive Brokers Web API, generated from the official OpenAPI spec.
-- [go-jina](https://github.com/psyb0t/go-jina): Unofficial Go client for the Jina AI APIs (embeddings, rerank, reader), generated from the official OpenAPI specs.
+- [go-jina](https://github.com/psyb0t/go-jina) · Go: Unofficial Go client for the Jina AI APIs (embeddings, rerank, reader), generated from the official OpenAPI specs.
+- [go-julep](https://github.com/psyb0t/go-julep) · Shell: Unofficial Go client for the Julep API, generated from the official OpenAPI spec.
 - [go-kalshi](https://github.com/psyb0t/go-kalshi) · Go: Unofficial Go client for the Kalshi REST and WebSocket APIs, generated from the official OpenAPI and AsyncAPI specs.
-- [go-llama-api](https://github.com/psyb0t/go-llama-api): Unofficial Go client for the Meta Llama API, generated from the official OpenAPI spec.
+- [go-llama-api](https://github.com/psyb0t/go-llama-api) · Shell: Unofficial Go client for the Meta Llama API, generated from the official OpenAPI spec.
 - [go-mistral](https://github.com/psyb0t/go-mistral) · Shell: Unofficial Go client for the Mistral AI API, generated from the official OpenAPI spec.
-- [go-perplexity](https://github.com/psyb0t/go-perplexity): Unofficial Go client for the Perplexity API, generated from the official OpenAPI spec.
+- [go-perplexity](https://github.com/psyb0t/go-perplexity) · Shell: Unofficial Go client for the Perplexity API, generated from the official OpenAPI spec.
 - [go-render-api](https://github.com/psyb0t/go-render-api) · Shell: Unofficial Go client for the Render API, generated from the official OpenAPI spec.
 - [go-revolut-business](https://github.com/psyb0t/go-revolut-business) · Shell: Unofficial Go client for the Revolut Business API, generated from the official OpenAPI spec.
 - [go-runway](https://github.com/psyb0t/go-runway) · Shell: Unofficial Go client for the Runway API, generated from the official OpenAPI spec.
-- [go-supabase-management](https://github.com/psyb0t/go-supabase-management): Unofficial Go client for the Supabase Management API, generated from the official OpenAPI spec.
+- [go-supabase-management](https://github.com/psyb0t/go-supabase-management) · Shell: Unofficial Go client for the Supabase Management API, generated from the official OpenAPI spec.
 - [go-tinker](https://github.com/psyb0t/go-tinker) · Shell: Unofficial Go client for the Thinking Machines Tinker API, generated from the official OpenAPI spec.
 - [go-togetherai](https://github.com/psyb0t/go-togetherai) · Go: Unofficial Go client for the Together AI API, generated from the official OpenAPI spec.
 - [go-trading212](https://github.com/psyb0t/go-trading212) · Shell: Unofficial Go client for the Trading 212 API, generated from the official OpenAPI spec.
-- [go-weave](https://github.com/psyb0t/go-weave): Unofficial Go client for the W&B Weave API, generated from the official OpenAPI spec.
-- [go-writer-ai](https://github.com/psyb0t/go-writer-ai): Unofficial Go client for the Writer API, generated from the official OpenAPI spec.
+- [go-valtown](https://github.com/psyb0t/go-valtown) · Shell: Unofficial Go client for the Val Town API, generated from the official OpenAPI spec.
+- [go-vercel](https://github.com/psyb0t/go-vercel) · Shell: Unofficial Go client for the Vercel REST API, generated from the official OpenAPI spec.
+- [go-weave](https://github.com/psyb0t/go-weave) · Shell: Unofficial Go client for the W&B Weave API, generated from the official OpenAPI spec.
+- [go-writer-ai](https://github.com/psyb0t/go-writer-ai) · Shell: Unofficial Go client for the Writer API, generated from the official OpenAPI spec.
 - [go-xai](https://github.com/psyb0t/go-xai) · Shell: Unofficial Go client for the xAI (Grok) API, generated from the official OpenAPI spec.
 
 ### Code generation
@@ -134,7 +137,6 @@
 - [supervisor-shell-ui](https://github.com/psyb0t/supervisor-shell-ui) · Python · ★ 7: A CLI alternative to the built-in web interface of Supervisor, offering a more convenient way to manage processes directly from the terminal.
 - [auto-usb-storage-mount](https://github.com/psyb0t/auto-usb-storage-mount) · Shell · ★ 6: auto-usb-storage-mount automates USB drive mounting with a config-driven approach. It mounts drives based on your rules, ensuring they're always where you expect, hassle-free. Perfect for those who prefer their storage management with a dash of anarchy.
 - [supervisor-config-gen](https://github.com/psyb0t/supervisor-config-gen) · Shell · ★ 2: supervisor-config-gen is a bash script that simplifies the process of creating generic configuration files for Supervisor, allowing developers to focus on building software.
-- [utils](https://github.com/psyb0t/utils) · Shell · ★ 2 · 1 fork: A collection of small utility scripts to make life easier.
 - [reusable-github-workflows](https://github.com/psyb0t/reusable-github-workflows) · Shell · ★ 1: Security-hardened reusable GitHub Actions workflows for Go, Python and Docker CI/CD: lint, test, scan, build, publish, release. Plus ClawHub skill/plugin publishing, MCP registry publish, self-rendered SVG badges, Codeberg/GitLab/Gitee mirroring, and a PR gate for non-collaborators. One uses: line, no copy-paste.
 - [ez-pre-commit](https://github.com/psyb0t/ez-pre-commit) · Shell: A simple bash script to manage your pre-commit hooks in a Git repository.
 <!-- categories:end -->

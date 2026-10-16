@@ -45,8 +45,8 @@
     },
     {
       "title": "Sysadmin and DevOps",
-      "repos": ["persistent-sshfs", "ssh-tunnel-swarm", "auto-usb-storage-mount", "supervisor-shell-ui", "supervisor-config-gen", "reusable-github-workflows", "ez-pre-commit", "utils"]
+      "repos": ["persistent-sshfs", "ssh-tunnel-swarm", "auto-usb-storage-mount", "supervisor-shell-ui", "supervisor-config-gen", "reusable-github-workflows", "ez-pre-commit"]
     }
   ],
-  "exclude": ["psyb0t", "sponsors", "exiftoolgui", "jstts", "img-txt-insert", "ez-file-uploader", "user-scripts", "convert-tools", "srt-to-dataset", "ctf-scripts", "py-telegram-logger-client"]
+  "exclude": ["psyb0t", "sponsors", "utils", "exiftoolgui", "jstts", "img-txt-insert", "ez-file-uploader", "user-scripts", "convert-tools", "srt-to-dataset", "ctf-scripts", "py-telegram-logger-client"]
 }
