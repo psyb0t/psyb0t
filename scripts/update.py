@@ -327,9 +327,14 @@ def categorize(repos: list[Repo], config: dict[str, Any]) -> list[Category]:
 
 
 def category_line(repo: Repo) -> str:
-    stars = f" ★ {repo.stars:,}" if repo.stars else ""
+    facts = [repo.language] if repo.language else []
+    if repo.stars:
+        facts.append(f"★ {repo.stars:,}")
+    if repo.forks:
+        facts.append(count_noun(repo.forks, "fork"))
+    meta = "".join(f" · {fact}" for fact in facts)
     description = f": {repo.description.strip()}" if repo.description else ""
-    return f"- [{repo.name}]({repo.url}){stars}{description}"
+    return f"- [{repo.name}]({repo.url}){meta}{description}"
 
 
 def categories_section(categories: list[Category]) -> str:
