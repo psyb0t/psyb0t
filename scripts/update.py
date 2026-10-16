@@ -201,7 +201,7 @@ class JsonFormatter(logging.Formatter):
 
     def format(self, record: logging.LogRecord) -> str:
         entry: dict[str, Any] = {
-            "time": dt.datetime.fromtimestamp(record.created, dt.timezone.utc).isoformat(),
+            "time": dt.datetime.fromtimestamp(record.created, dt.UTC).isoformat(),
             "level": record.levelname,
             "file": record.filename,
             "line": record.lineno,
@@ -596,7 +596,7 @@ def replace_between(text: str, start: str, end: str, body: str) -> str:
     block = f"{start}\n{body}\n{end}"
     if start in text and end in text:
         pattern = re.escape(start) + r".*?" + re.escape(end)
-        return re.sub(pattern, lambda _: block, text, flags=re.S)
+        return re.sub(pattern, lambda _: block, text, flags=re.DOTALL)
     return f"{text.rstrip()}\n\n{block}\n"
 
 
