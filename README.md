@@ -50,23 +50,32 @@
 ### API clients
 
 - [go-spamcheck](https://github.com/psyb0t/go-spamcheck) ★ 2: Tiny Go client for Postmark's SpamCheck API: submit a raw email, get its SpamAssassin spam score and matched-rule breakdown. No account or API key required.
+- [go-contextual-ai](https://github.com/psyb0t/go-contextual-ai): Unofficial Go client for the Contextual AI API, generated from the official OpenAPI spec.
 - [go-elevenlabs](https://github.com/psyb0t/go-elevenlabs): Unofficial Go client for the ElevenLabs API, generated from the official OpenAPI spec.
 - [go-etoro](https://github.com/psyb0t/go-etoro): Unofficial Go clients for the eToro public REST and WebSocket APIs, generated from eToro's OpenAPI and AsyncAPI specs.
 - [go-exa](https://github.com/psyb0t/go-exa): Unofficial Go client for the Exa search API, generated from the official OpenAPI spec.
+- [go-fireworks](https://github.com/psyb0t/go-fireworks): Unofficial Go client for the Fireworks AI API, generated from the official OpenAPI spec.
+- [go-hubspot](https://github.com/psyb0t/go-hubspot): Unofficial Go client for the HubSpot API, generated from the official OpenAPI spec.
 - [go-ibkr](https://github.com/psyb0t/go-ibkr): Unofficial Go client for the Interactive Brokers Web API, generated from the official OpenAPI spec.
 - [go-kalshi](https://github.com/psyb0t/go-kalshi): Unofficial Go client for the Kalshi REST and WebSocket APIs, generated from the official OpenAPI and AsyncAPI specs.
+- [go-llama-api](https://github.com/psyb0t/go-llama-api): Unofficial Go client for the Meta Llama API, generated from the official OpenAPI spec.
 - [go-mistral](https://github.com/psyb0t/go-mistral): Unofficial Go client for the Mistral AI API, generated from the official OpenAPI spec.
+- [go-perplexity](https://github.com/psyb0t/go-perplexity): Unofficial Go client for the Perplexity API, generated from the official OpenAPI spec.
 - [go-render-api](https://github.com/psyb0t/go-render-api): Unofficial Go client for the Render API, generated from the official OpenAPI spec.
 - [go-revolut-business](https://github.com/psyb0t/go-revolut-business): Unofficial Go client for the Revolut Business API, generated from the official OpenAPI spec.
+- [go-runway](https://github.com/psyb0t/go-runway): Unofficial Go client for the Runway API, generated from the official OpenAPI spec.
+- [go-tinker](https://github.com/psyb0t/go-tinker): Unofficial Go client for the Thinking Machines Tinker API, generated from the official OpenAPI spec.
 - [go-togetherai](https://github.com/psyb0t/go-togetherai): Unofficial Go client for the Together AI API, generated from the official OpenAPI spec.
 - [go-trading212](https://github.com/psyb0t/go-trading212): Unofficial Go client for the Trading 212 API, generated from the official OpenAPI spec.
+- [go-writer-ai](https://github.com/psyb0t/go-writer-ai): Unofficial Go client for the Writer API, generated from the official OpenAPI spec.
+- [go-xai](https://github.com/psyb0t/go-xai): Unofficial Go client for the xAI (Grok) API, generated from the official OpenAPI spec.
 
 ### Code generation
 
 - [gen-asyncapi](https://github.com/psyb0t/gen-asyncapi): Generates Go or TypeScript types, strict validation, union types and a WebSocket client from AsyncAPI 3 specs.
 - [oapixconstgen](https://github.com/psyb0t/oapixconstgen): Go tool that generates typed Go constants from the x-constants extension in OpenAPI specs, keeping spec and code in sync.
 
-### Go libraries
+### Go libraries and tooling
 
 - [gofindimpl](https://github.com/psyb0t/gofindimpl) ★ 3: Hunt down Go interface implementations like a bloodhound with trust issues. Tired of grep-ing through thousands of lines trying to figure out which structs actually implement that damn interface? This tool does the heavy lifting so you don't have to suffer through another existential crisis at 3am.
 - [servicepack](https://github.com/psyb0t/servicepack) ★ 3: Clone-and-own Go service framework for concurrent services: run them together locally, then deploy as one binary or split them into microservices, with retries, dependencies, graceful shutdown, and scoped logs.

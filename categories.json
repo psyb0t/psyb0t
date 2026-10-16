@@ -28,7 +28,7 @@
       "repos": ["gen-asyncapi", "oapixconstgen"]
     },
     {
-      "title": "Go libraries",
+      "title": "Go libraries and tooling",
       "repos": ["servicepack", "common-go", "aichteeteapee", "elelem", "essessey", "vibecheck", "go-asyncapi", "ctxerrors", "ctxscope", "slogging", "commander", "goenv", "gonfiguration", "go-config-parser", "procscope", "gofindimpl"]
     },
     {
