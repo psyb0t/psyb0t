@@ -3,4 +3,6 @@ preview.html
 __pycache__/
 .shots/
 git-update.sh
+git-update.sh.debot
+.mypy_cache/
 .telemetry/
