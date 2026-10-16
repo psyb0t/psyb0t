@@ -4,5 +4,124 @@
 <a href="https://github.com/psyb0t/mt5-httpapi"><picture><source media="(prefers-color-scheme: dark)" srcset="cards/mt5-httpapi-dark.svg"><img alt="mt5-httpapi: MetaTrader 5 in a real Windows VM (Docker + QEMU/KVM), driven over REST + MCP — programmatic trading plus server-side TA: OHLC bars enriched with RSI/MACD/Bollinger/ADX/VWAP/Ichimoku/Order Blocks/FVGs (primitives, not signals). Typed MCP tools mirror the whole surface. Multi-broker, multi-account. No Wine bullshit. (Python, 31 stars, 15 forks)" src="cards/mt5-httpapi-light.svg" width="49%"></picture></a> <a href="https://github.com/psyb0t/docker-claudebox"><picture><source media="(prefers-color-scheme: dark)" srcset="cards/docker-claudebox-dark.svg"><img alt="docker-claudebox: Claude Code in a Docker image built on aicodebox, with an HTTP API, an OpenAI-compatible endpoint, an MCP server, a Telegram bot and a cron scheduler, in minimal or full-toolchain variants. (Shell, 23 stars, 5 forks)" src="cards/docker-claudebox-light.svg" width="49%"></picture></a>
 <a href="https://github.com/psyb0t/docker-planesnitch"><picture><source media="(prefers-color-scheme: dark)" srcset="cards/docker-planesnitch-dark.svg"><img alt="docker-planesnitch: Snitches on every interesting aircraft that dares fly near your locations — military jets, government spooks, emergency squawks, sketchy low-flyers, or whatever the fuck you tell it to watch for. Monitor multiple locations at once — your house, your office, grandma's house, Area 51, whatever. (Python, 19 stars, 2 forks)" src="cards/docker-planesnitch-light.svg" width="49%"></picture></a> <a href="https://github.com/psyb0t/aigate"><picture><source media="(prefers-color-scheme: dark)" srcset="cards/aigate-dark.svg"><img alt="aigate: A self-hosted AI platform — inference, tool use, browser automation, image generation, speech synthesis, transcription, object storage, agentic code execution, and more — behind a single OpenAI-compatible endpoint. One docker-compose up. (Shell, 16 stars, 2 forks)" src="cards/aigate-light.svg" width="49%"></picture></a>
 <a href="https://github.com/psyb0t/persistent-sshfs"><picture><source media="(prefers-color-scheme: dark)" srcset="cards/persistent-sshfs-dark.svg"><img alt="persistent-sshfs: A tool that ensures your SSHFS mounts are as persistent as your disdain for authority. (Shell, 15 stars, 0 forks)" src="cards/persistent-sshfs-light.svg" width="49%"></picture></a> <a href="https://github.com/psyb0t/ssh-tunnel-swarm"><picture><source media="(prefers-color-scheme: dark)" srcset="cards/ssh-tunnel-swarm-dark.svg"><img alt="ssh-tunnel-swarm: A powerful shell script tool for managing multiple SSH tunnels concurrently. (Shell, 14 stars, 1 fork)" src="cards/ssh-tunnel-swarm-light.svg" width="49%"></picture></a>
-<a href="https://github.com/psyb0t/uzdabrawza"><picture><source media="(prefers-color-scheme: dark)" srcset="cards/uzdabrawza-dark.svg"><img alt="uzdabrawza: The Anal-Queen of AI Browser Automation 🏴‍☠️ A beautifully fucked-up Skynet-powered browser automation script that harnesses neural brainfuck and machine learning chaos to give zero shits about anything while somehow still working perfectly. (Python, 12 stars, 0 forks)" src="cards/uzdabrawza-light.svg" width="49%"></picture></a> <a href="https://github.com/psyb0t/safe-stremio-web"><picture><source media="(prefers-color-scheme: dark)" srcset="cards/safe-stremio-web-dark.svg"><img alt="safe-stremio-web: The UI fortress for accessing the Stremio service. Cloaked behind nginx, this container acts as your cyber gateway to endless streaming possibilities. (Shell, 11 stars, 1 fork)" src="cards/safe-stremio-web-light.svg" width="49%"></picture></a>
 <!-- top-repos:end -->
+
+<!-- categories:start -->
+### AI coding agents
+
+- [docker-claudebox](https://github.com/psyb0t/docker-claudebox) ★ 23: Claude Code in a Docker image built on aicodebox, with an HTTP API, an OpenAI-compatible endpoint, an MCP server, a Telegram bot and a cron scheduler, in minimal or full-toolchain variants.
+- [docker-pibox](https://github.com/psyb0t/docker-pibox) ★ 3: pi-coding-agent in a Docker image built on aicodebox, with an HTTP API, an OpenAI-compatible endpoint, an MCP server, a Telegram bot and a cron scheduler.
+- [codex-plugin-loop](https://github.com/psyb0t/codex-plugin-loop) ★ 1: Codex CLI plugin that repeats instructions at a fixed interval in an open session. Holds one turn open on the clock.sleep tool, resumes itself when the turn gets killed, and stops only on an explicit $loop:stop.
+- [agents](https://github.com/psyb0t/agents): One marketplace for every psyb0t agent skill and plugin, installable from Claude Code and Codex.
+- [docker-aicodebox](https://github.com/psyb0t/docker-aicodebox): Base Docker image that wraps any terminal AI coding agent in an HTTP API, an OpenAI-compatible endpoint, an MCP server, a Telegram bot and a cron scheduler through a short adapter.
+- [docker-codexbox](https://github.com/psyb0t/docker-codexbox): OpenAI Codex CLI in a Docker image built on aicodebox, with an HTTP API, an OpenAI-compatible endpoint, an MCP server, a Telegram bot and a cron scheduler, in minimal or full-toolchain variants.
+- [peen](https://github.com/psyb0t/peen): Coding agent with a controller: start it once, then open any project from its browser UI or over WebSocket. Each project gets its own agent session in a process or container, follows the project's AGENTS.md, rules, skills and hooks, and every tool call and model exchange lands in SQLite.
+
+### Self-hosted AI services
+
+- [aigate](https://github.com/psyb0t/aigate) ★ 16: A self-hosted AI platform — inference, tool use, browser automation, image generation, speech synthesis, transcription, object storage, agentic code execution, and more — behind a single OpenAI-compatible endpoint. One docker-compose up.
+- [docker-talkies](https://github.com/psyb0t/docker-talkies) ★ 6: Self-hosted Docker speech API for OpenAI-compatible transcription and text-to-speech, streaming ASR, voice cloning, phoneme recognition, and MCP.
+- [cli-llm-chat](https://github.com/psyb0t/cli-llm-chat) ★ 5: Welcome to the digital thunderdome, you keyboard-smashing lunatics! This ain't your grandma's chatbot – it's a CLI-powered, LLM-fueled beast! And guess what? It also supports Telegram integration right out of the box. Get ready to unleash the madness!
+- [docker-audiolla](https://github.com/psyb0t/docker-audiolla) ★ 5: Self-hosted audio API in one Docker container. Stem separation, mastering, MIR (BPM/key/chords), audio→MIDI, text-to-music + SFX (MusicGen/Stable Audio/Riffusion/AudioLDM2), diarization, speech enhancement, restoration, embeddings + zero-shot tagging, workflows, async + webhooks. REST + MCP. CPU + CUDA.
+- [docker-qwenspeak](https://github.com/psyb0t/docker-qwenspeak) ★ 4: Qwen3-TTS over SSH. Pick a voice, clone a voice, design a voice - all through a YAML config piped via stdin. Models run locally, no API keys, no cloud bullshit.
+- [decidealot](https://github.com/psyb0t/decidealot) ★ 3: Make the call. Run local Laya, Von, CLM or hosted Jev for typed classification and scoring through one HTTP and MCP API, with resource-aware batches.
+- [docker-predictalot](https://github.com/psyb0t/docker-predictalot) ★ 3: Self-hosted forecasting + prediction service. Five zero-shot time-series foundation models (Chronos-2, TimesFM 2.5, Moirai-2, Toto-1, Sundial) across six forecast types, plus nine supervised tabular ML backends (LightGBM, XGBoost, sklearn family) with calibrated / stacking / diversified meta-learners. Unified REST API + MCP server.
+- [2xbrainz](https://github.com/psyb0t/2xbrainz) ★ 1: A second brain for conversations you're already having: listens to your mic and system audio as two separate streams, transcribes both live, works out when the other side shut up, and hands you a reply draft before you panic. It drafts, never sends or speaks for you. Alpha — live capture is Linux/PipeWire only.
+- [docker-flickies](https://github.com/psyb0t/docker-flickies) ★ 1: Self-hosted video API in one Docker container. Lipsync (LatentSync 1.5, Wav2Lip), face restoration (GFPGAN), ffmpeg ops (trim/concat/transcode/scale/mux/extract/thumbnail/gif), ffprobe metadata, async jobs + webhooks. REST + MCP. CPU + CUDA. Drive from shell, generated Go/Python clients, or LLM agent.
+- [ollama-chat-party](https://github.com/psyb0t/ollama-chat-party) ★ 1: Multi-user AI-powered RAG beast that lets everyone talk to the same LLM simultaneously!
+- [chatz](https://github.com/psyb0t/chatz): Self-hosted AI chat that deploys as one Go binary. Streaming SSE, OpenAI and Anthropic upstreams, MCP tools, and generative UI that renders live charts and components from model output. Postgres or SQLite.
+- [torchbase](https://github.com/psyb0t/torchbase): Pinned PyTorch CPU and CUDA base images. Build the damn stack once.
+
+### Browser and device automation
+
+- [docker-stealthy-auto-browse](https://github.com/psyb0t/docker-stealthy-auto-browse) ★ 91: Stealth browser automation that actually works. Runs Camoufox (custom Firefox) in Docker with zero Chrome DevTools Protocol exposure, real OS-level mouse and keyboard input via PyAutoGUI, and a JSON HTTP API + MCP server to control it all remotely. Watch it live via noVNC.
+- [uzdabrawza](https://github.com/psyb0t/uzdabrawza) ★ 12: The Anal-Queen of AI Browser Automation 🏴‍☠️ A beautifully fucked-up Skynet-powered browser automation script that harnesses neural brainfuck and machine learning chaos to give zero shits about anything while somehow still working perfectly.
+- [android-lab](https://github.com/psyb0t/android-lab): Build Android shit, boot a private emulator and poke its UI through Docker. Keep the SDK off your host.
+- [dikciz-launcher](https://github.com/psyb0t/dikciz-launcher): Dikciz Launcher. Your Android home screen, your fucking rules. Native pages, HTML widgets, Lua automation and local WebSocket/MCP controls.
+
+### Trading
+
+- [mt5-httpapi](https://github.com/psyb0t/mt5-httpapi) ★ 31: MetaTrader 5 in a real Windows VM (Docker + QEMU/KVM), driven over REST + MCP — programmatic trading plus server-side TA: OHLC bars enriched with RSI/MACD/Bollinger/ADX/VWAP/Ichimoku/Order Blocks/FVGs (primitives, not signals). Typed MCP tools mirror the whole surface. Multi-broker, multi-account. No Wine bullshit.
+- [docker-wickworks](https://github.com/psyb0t/docker-wickworks) ★ 3: Dumb-as-rocks OHLC analyzer. POST your bars + the indicators you want, get back exactly what you asked for. RSI/MACD/Bollinger/ADX/ATR/VWAP/Ichimoku, plus SMC primitives: Order Blocks, FVGs, BOS/CHoCH, swing structure. Stateless HTTP + MCP, no database, no AI-powered signals, no $97/mo Discord upsell.
+- [docker-mql-compiler](https://github.com/psyb0t/docker-mql-compiler) ★ 1: Compile MQL4 and MQL5 on Linux: MetaEditor under Wine in Docker, one command, compile errors in your terminal.
+- [MQL4-Utils](https://github.com/psyb0t/MQL4-Utils) ★ 1: Header files to make life easier when building expert advisors for MetaTrader4 in MQL4
+- [ibkr-httpapi](https://github.com/psyb0t/ibkr-httpapi): Interactive Brokers, curl-friendly — over REST + MCP. FastAPI + ib_async over a Linux-native IB Gateway: stocks/options/futures/forex/crypto/CFD contracts, quotes, historical bars, orders, positions, executions. Typed MCP tools mirror the whole surface. The IBKR half of mt5-httpapi — same shape, no Windows VM.
+
+### API clients
+
+- [go-spamcheck](https://github.com/psyb0t/go-spamcheck) ★ 2: Tiny Go client for Postmark's SpamCheck API: submit a raw email, get its SpamAssassin spam score and matched-rule breakdown. No account or API key required.
+- [go-elevenlabs](https://github.com/psyb0t/go-elevenlabs): Unofficial Go client for the ElevenLabs API, generated from the official OpenAPI spec.
+- [go-etoro](https://github.com/psyb0t/go-etoro): Unofficial Go clients for the eToro public REST and WebSocket APIs, generated from eToro's OpenAPI and AsyncAPI specs.
+- [go-exa](https://github.com/psyb0t/go-exa): Unofficial Go client for the Exa search API, generated from the official OpenAPI spec.
+- [go-ibkr](https://github.com/psyb0t/go-ibkr): Unofficial Go client for the Interactive Brokers Web API, generated from the official OpenAPI spec.
+- [go-kalshi](https://github.com/psyb0t/go-kalshi): Unofficial Go client for the Kalshi REST and WebSocket APIs, generated from the official OpenAPI and AsyncAPI specs.
+- [go-mistral](https://github.com/psyb0t/go-mistral): Unofficial Go client for the Mistral AI API, generated from the official OpenAPI spec.
+- [go-render-api](https://github.com/psyb0t/go-render-api): Unofficial Go client for the Render API, generated from the official OpenAPI spec.
+- [go-revolut-business](https://github.com/psyb0t/go-revolut-business): Unofficial Go client for the Revolut Business API, generated from the official OpenAPI spec.
+- [go-togetherai](https://github.com/psyb0t/go-togetherai): Unofficial Go client for the Together AI API, generated from the official OpenAPI spec.
+- [go-trading212](https://github.com/psyb0t/go-trading212): Unofficial Go client for the Trading 212 API, generated from the official OpenAPI spec.
+
+### Code generation
+
+- [gen-asyncapi](https://github.com/psyb0t/gen-asyncapi): Generates Go or TypeScript types, strict validation, union types and a WebSocket client from AsyncAPI 3 specs.
+- [oapixconstgen](https://github.com/psyb0t/oapixconstgen): Go tool that generates typed Go constants from the x-constants extension in OpenAPI specs, keeping spec and code in sync.
+
+### Go libraries
+
+- [gofindimpl](https://github.com/psyb0t/gofindimpl) ★ 3: Hunt down Go interface implementations like a bloodhound with trust issues. Tired of grep-ing through thousands of lines trying to figure out which structs actually implement that damn interface? This tool does the heavy lifting so you don't have to suffer through another existential crisis at 3am.
+- [servicepack](https://github.com/psyb0t/servicepack) ★ 3: Clone-and-own Go service framework for concurrent services: run them together locally, then deploy as one binary or split them into microservices, with retries, dependencies, graceful shutdown, and scoped logs.
+- [aichteeteapee](https://github.com/psyb0t/aichteeteapee) ★ 1: Pronounced "HTTP" - because sometimes the best fucking code comes with wordplay. A Go library that does everything you need and nothing you don't. Spin up a production-ready server with middleware, WebSocket hubs, file uploads, static serving, request proxying with caching, and OpenAPI validation.
+- [ctxerrors](https://github.com/psyb0t/ctxerrors) ★ 1: A Go library that wraps errors with context information (file, line, function) because debugging without context is like trying to find your dick in the dark.
+- [elelem](https://github.com/psyb0t/elelem) ★ 1: A Go engine for talking to LLMs that doesn't give a shit which one. Streaming, tool loops, history that actually fits the context window, retries that don't repeat themselves, and typed structured output. Swap OpenAI for Anthropic by changing one line. Library, not a framework — you own the loop.
+- [essessey](https://github.com/psyb0t/essessey) ★ 1: Stream an LLM turn to a client over SSE, NATS or WebSocket — one event model, no transport dependencies.
+- [go-config-parser](https://github.com/psyb0t/go-config-parser) ★ 1: A Go wrapper package for reading and unmarshalling data from configuration files based on Viper.
+- [vibecheck](https://github.com/psyb0t/vibecheck) ★ 1: Turn messy state into typed, auditable classifications, scores, and policy decisions over REST and MCP.
+- [commander](https://github.com/psyb0t/commander): Commander wraps os/exec into something that doesn't make you want to fucking quit programming — proper process lifecycle management, real-time output streaming, graceful termination, and a mock system for testing.
+- [common-go](https://github.com/psyb0t/common-go): Shared Go building blocks for psyb0t services: error sentinels, cache, DB, queues, rate limiting, a legacy Loki slog sink (superseded by github.com/psyb0t/slogging), Temporal, and LLM utilities.
+- [ctxscope](https://github.com/psyb0t/ctxscope): Pin log attributes to a context.Context and every line under it carries them. Set request_id once at the door instead of dragging it through twenty functions that don't give a shit about it.
+- [go-asyncapi](https://github.com/psyb0t/go-asyncapi): Loads AsyncAPI 3 documents in Go: servers, channels, operations and messages, with $refs followed across files and traits merged.
+- [goenv](https://github.com/psyb0t/goenv): The most over-engineered environment variable reader in the history of Go programming. A full-blown, battle-tested, enterprise-grade package that reads ONE environment variable and tells you if you're in prod or dev.
+- [gonfiguration](https://github.com/psyb0t/gonfiguration): Config loading with zero fluff. Because ain't nobody got time for overcomplicated crap. Unleash the gonfiguration beast!
+- [procscope](https://github.com/psyb0t/procscope): Let a Go process profile itself — CPU, heap, goroutines, blocking — and get the answer back as a value instead of serving pprof on a port nobody should be exposing.
+- [slogging](https://github.com/psyb0t/slogging): Everything for Go's stdlib log/slog in one place: configure it from the environment, plus handlers that ship logs to Loki or keep them searchable in memory. Spiritual successor to logrus-configurator.
+
+### Radio and hardware
+
+- [piraterf](https://github.com/psyb0t/piraterf) ★ 286: PIrateRF transforms your Raspberry Pi Zero W into a portable RF signal generator that spawns its own WiFi hotspot. Control everything from FM broadcasts to digital modes through your browser - hack the airwaves from anywhere! 📡⚡
+- [docker-planesnitch](https://github.com/psyb0t/docker-planesnitch) ★ 19: Snitches on every interesting aircraft that dares fly near your locations — military jets, government spooks, emergency squawks, sketchy low-flyers, or whatever the fuck you tell it to watch for. Monitor multiple locations at once — your house, your office, grandma's house, Area 51, whatever.
+- [adsb-publisher-setup](https://github.com/psyb0t/adsb-publisher-setup) ★ 1: One-script setup for receiving ADS-B aircraft data with an RTL-SDR dongle and publishing it to multiple flight tracking aggregators simultaneously.  Deploys a Docker Compose stack with automatic configuration, SDR detection, and optional Grafana dashboards.
+- [gorpitx](https://github.com/psyb0t/gorpitx): Go wrapper for rpitx — subprocess-managed RF transmission via a singleton. Covers FM/RDS, Morse, POCSAG, FT8, SSTV, RTTY, FSK, IQ and more (12 modules). Dev-mode mocks execution so you can test without keying an actual transmitter.
+- [marlinfw-tools](https://github.com/psyb0t/marlinfw-tools)
+
+### Self-hosted services and MCP servers
+
+- [docker-hybrids3](https://github.com/psyb0t/docker-hybrids3) ★ 5: Lightweight object storage that speaks S3 (boto3/AWS SDK compatible), plain HTTP, and MCP. SQLite for metadata, flat files on disk.
+- [docker-mailbox](https://github.com/psyb0t/docker-mailbox) ★ 4: Multi-mailbox IMAP/SMTP control plane. One YAML, N accounts, one bearer-auth gate. Unified inbox across Gmail/Outlook/iCloud/mailo/inbox.lv/whatever — search, read, mark, send. Reader mode strips HTML chrome for LLMs. Streamable-HTTP MCP server + REST API on one port. Ships as a Docker image.
+- [docker-telethon-plus](https://github.com/psyb0t/docker-telethon-plus) ★ 4: Your Telegram account, but it takes HTTP requests. Wraps Telethon — the real MTProto userbot client, not that neutered Bot API garbage — behind a JSON HTTP API and a Model Context Protocol endpoint.
+- [docker-lockbox](https://github.com/psyb0t/docker-lockbox) ★ 1: Locked-down SSH container with sandboxed file operations. Use as a base image to build your own dedicated tool containers - just provide a list of allowed commands and install your binaries. No shell access, no injection bullshit.
+- [docker-proxq](https://github.com/psyb0t/docker-proxq) ★ 1: proxq - The honey badger of HTTP proxies. Takes your request, throws it in a Redis-backed job queue, and deals with it when it damn well pleases. You get a job ID back instantly — come back later to pick up the goods.
+- [docker-mediaproc](https://github.com/psyb0t/docker-mediaproc): Containerized media processing tools over SSH. Drop files in, run ffmpeg/sox/imagemagick over SSH, get your shit out. No shell access, no bullshit - just a locked-down Python wrapper that only lets you run what you're supposed to run.
+- [gitrakz](https://github.com/psyb0t/gitrakz): Self-hosted GitHub activity tracker that syncs your gh activity into SQLite and runs template-driven timeline, session, and report views.
+- [rankrat](https://github.com/psyb0t/rankrat): Self-hosted MCP and REST server that audits, monitors and manages sites you control across Search Console, Bing Webmaster, GA4, Tag Manager, Clarity, Cloudflare, PageSpeed and CrUX.
+
+### Privacy, offline and networking
+
+- [offgrid-tools](https://github.com/psyb0t/offgrid-tools) ★ 61: Self-contained offline environment providing local AI chat, offline Wikipedia/content archives, IRC communication, audio streaming, file server, and development tools. Designed for zero internet dependency - download once, run anywhere. Perfect for remote areas, emergency scenarios, or escaping surveillance capitalism.
+- [safe-stremio](https://github.com/psyb0t/safe-stremio) ★ 42: Safe-Stremio is your gateway to running Stremio Server and Stremio Web within a Docker container, wrapped in layers of security, anonymity, and badassery. This ain't your grandma's streaming setup—this is for digital pirates and cyberpunks who value privacy and control.
+- [safe-stremio-web](https://github.com/psyb0t/safe-stremio-web) ★ 11: The UI fortress for accessing the Stremio service. Cloaked behind nginx, this container acts as your cyber gateway to endless streaming possibilities.
+- [safe-transmission](https://github.com/psyb0t/safe-transmission) ★ 8: The ultimate fusion of security and torrenting, designed for the gritty streets of the cyberpunk future. This Docker image mashes together OpenVPN, Transmission, and Nginx, creating a fortified fortress for your torrent traffic. With built-in optional rate-limited HTTP basic authentication, you can fend off those pesky netrunners, and optional VPN
+- [docker-openvpn-client](https://github.com/psyb0t/docker-openvpn-client) ★ 5: Welcome to the most badass OpenVPN Client Docker image you'll ever see. This ain't your grandma's VPN setup. It's sleek, it's stealthy, and it’s ready to serve your rebellious needs.
+- [docker-torssh](https://github.com/psyb0t/docker-torssh) ★ 1: Connect to TOR SSH hidden services from a docker container.
+- [pr0xteus](https://github.com/psyb0t/pr0xteus): On-demand WireGuard exit pools with short-lived SOCKS5 and HTTP proxy leases for self-hosted clients, containers, and Tailscale.
+
+### Sysadmin and DevOps
+
+- [persistent-sshfs](https://github.com/psyb0t/persistent-sshfs) ★ 15: A tool that ensures your SSHFS mounts are as persistent as your disdain for authority.
+- [ssh-tunnel-swarm](https://github.com/psyb0t/ssh-tunnel-swarm) ★ 14: A powerful shell script tool for managing multiple SSH tunnels concurrently.
+- [supervisor-shell-ui](https://github.com/psyb0t/supervisor-shell-ui) ★ 7: A CLI alternative to the built-in web interface of Supervisor, offering a more convenient way to manage processes directly from the terminal.
+- [auto-usb-storage-mount](https://github.com/psyb0t/auto-usb-storage-mount) ★ 6: auto-usb-storage-mount automates USB drive mounting with a config-driven approach. It mounts drives based on your rules, ensuring they're always where you expect, hassle-free. Perfect for those who prefer their storage management with a dash of anarchy.
+- [supervisor-config-gen](https://github.com/psyb0t/supervisor-config-gen) ★ 2: supervisor-config-gen is a bash script that simplifies the process of creating generic configuration files for Supervisor, allowing developers to focus on building software.
+- [utils](https://github.com/psyb0t/utils) ★ 2: A collection of small utility scripts to make life easier.
+- [reusable-github-workflows](https://github.com/psyb0t/reusable-github-workflows) ★ 1: Security-hardened reusable GitHub Actions workflows for Go, Python and Docker CI/CD: lint, test, scan, build, publish, release. Plus ClawHub skill/plugin publishing, MCP registry publish, self-rendered SVG badges, Codeberg/GitLab/Gitee mirroring, and a PR gate for non-collaborators. One uses: line, no copy-paste.
+- [ez-pre-commit](https://github.com/psyb0t/ez-pre-commit): A simple bash script to manage your pre-commit hooks in a Git repository.
+<!-- categories:end -->

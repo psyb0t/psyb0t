@@ -1,4 +1,5 @@
-"""Regenerate the profile README: the top repos by stars, as pinned-style cards.
+"""Regenerate the profile README: the top repos by stars as pinned-style cards,
+then every public repo listed under its category from categories.json.
 
 Run from anywhere; paths resolve from the repository root. Reads GITHUB_TOKEN
 when set (the Actions token is enough, everything read here is public). Writes
@@ -32,10 +33,11 @@ PER_PAGE = 100
 ENV_TOKEN = "GITHUB_TOKEN"
 ENV_USER = "PROFILE_USER"
 DEFAULT_USER = "psyb0t"
-TOP_N = 12
+TOP_N = 10
 
 ROOT = Path(__file__).resolve().parent.parent
 CARDS_DIR = ROOT / "cards"
+CATEGORIES = ROOT / "categories.json"
 README = ROOT / "README.md"
 PREVIEW = ROOT / "preview.html"
 LOG_FILE = ROOT / ".logs" / "update.log"
@@ -44,6 +46,9 @@ LOG_BACKUPS = 3
 
 REPOS_START = "<!-- top-repos:start -->"
 REPOS_END = "<!-- top-repos:end -->"
+CATEGORIES_START = "<!-- categories:start -->"
+CATEGORIES_END = "<!-- categories:end -->"
+CATEGORY_HEADING = "###"
 
 SVG_NS = "http://www.w3.org/2000/svg"
 FONT = '-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif'
@@ -164,6 +169,13 @@ class Repo:
     forks: int
     is_fork: bool
     is_archived: bool
+    topics: list[str]
+
+
+@dataclass
+class Category:
+    title: str
+    repos: list[Repo]
 
 
 def configure_logging() -> None:
@@ -240,6 +252,7 @@ def fetch_repos(user: str) -> list[Repo]:
             forks=r["forks_count"],
             is_fork=r["fork"],
             is_archived=r["archived"],
+            topics=r.get("topics") or [],
         )
         for r in raw
     ]
@@ -260,6 +273,72 @@ def top_repos(repos: list[Repo]) -> list[Repo]:
         },
     )
     return top
+
+
+def load_categories() -> dict[str, Any]:
+    try:
+        return json.loads(CATEGORIES.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as err:
+        raise UpdateError(f"read {CATEGORIES.name}") from err
+
+
+def categorize(repos: list[Repo], config: dict[str, Any]) -> list[Category]:
+    """Each public repo goes under the category that names it, else the
+    category its topics map to. Excluded and unmatched repos are left out."""
+    by_name = {r.name: r for r in repos if not r.is_fork and not r.is_archived}
+    excluded = set(config.get("exclude", []))
+    titles = [c["title"] for c in config["categories"]]
+    members: dict[str, list[Repo]] = {title: [] for title in titles}
+    placed: set[str] = set()
+
+    for category in config["categories"]:
+        for name in category["repos"]:
+            repo = by_name.get(name)
+            if repo is None:
+                logger.warning("categorized repo not found", extra={"repo": name})
+                continue
+            members[category["title"]].append(repo)
+            placed.add(name)
+
+    topic_categories: dict[str, str] = config.get("topic_categories", {})
+    unmatched = []
+    for name, repo in by_name.items():
+        if name in placed or name in excluded:
+            continue
+        title = next((topic_categories[t] for t in repo.topics if t in topic_categories), None)
+        if title is None:
+            unmatched.append(name)
+            continue
+        members[title].append(repo)
+
+    if unmatched:
+        logger.warning("repos without a category", extra={"repos": sorted(unmatched)})
+
+    categories = []
+    for title in titles:
+        ranked = sorted(members[title], key=lambda r: (-r.stars, r.name.lower()))
+        if ranked:
+            categories.append(Category(title=title, repos=ranked))
+    logger.info(
+        "repos categorized",
+        extra={"categories": {c.title: len(c.repos) for c in categories}},
+    )
+    return categories
+
+
+def category_line(repo: Repo) -> str:
+    stars = f" ★ {repo.stars:,}" if repo.stars else ""
+    description = f": {repo.description.strip()}" if repo.description else ""
+    return f"- [{repo.name}]({repo.url}){stars}{description}"
+
+
+def categories_section(categories: list[Category]) -> str:
+    blocks = []
+    for category in categories:
+        lines = [f"{CATEGORY_HEADING} {category.title}", ""]
+        lines += [category_line(r) for r in category.repos]
+        blocks.append("\n".join(lines))
+    return "\n\n".join(blocks)
 
 
 def text_width(text: str, size: float, is_bold: bool = False) -> float:
@@ -521,9 +600,15 @@ def replace_between(text: str, start: str, end: str, body: str) -> str:
     return f"{text.rstrip()}\n\n{block}\n"
 
 
-def write_readme(repos: list[Repo]) -> None:
+def write_readme(repos: list[Repo], categories: list[Category]) -> None:
     text = README.read_text(encoding="utf-8") if README.exists() else ""
     text = replace_between(text, REPOS_START, REPOS_END, repos_section(repos))
+    text = replace_between(
+        text,
+        CATEGORIES_START,
+        CATEGORIES_END,
+        categories_section(categories),
+    )
     README.write_text(text.lstrip(), encoding="utf-8")
     logger.info("readme written", extra={"path": str(README.relative_to(ROOT))})
 
@@ -578,8 +663,9 @@ def main() -> None:
 
     repos = fetch_repos(user)
     top = top_repos(repos)
+    categories = categorize(repos, load_categories())
     write_cards(top)
-    write_readme(top)
+    write_readme(top, categories)
     if args.preview:
         write_preview(user, top)
     logger.info("update finished", extra={"top": len(top)})

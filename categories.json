@@ -1,0 +1,52 @@
+{
+  "topic_categories": {
+    "api-client": "API clients"
+  },
+  "categories": [
+    {
+      "title": "AI coding agents",
+      "repos": ["docker-claudebox", "docker-codexbox", "docker-pibox", "docker-aicodebox", "peen", "agents", "codex-plugin-loop"]
+    },
+    {
+      "title": "Self-hosted AI services",
+      "repos": ["aigate", "docker-talkies", "docker-qwenspeak", "docker-audiolla", "docker-flickies", "docker-predictalot", "decidealot", "chatz", "ollama-chat-party", "cli-llm-chat", "2xbrainz", "torchbase"]
+    },
+    {
+      "title": "Browser and device automation",
+      "repos": ["docker-stealthy-auto-browse", "uzdabrawza", "android-lab", "dikciz-launcher"]
+    },
+    {
+      "title": "Trading",
+      "repos": ["mt5-httpapi", "ibkr-httpapi", "docker-wickworks", "docker-mql-compiler", "MQL4-Utils"]
+    },
+    {
+      "title": "API clients",
+      "repos": ["go-spamcheck"]
+    },
+    {
+      "title": "Code generation",
+      "repos": ["gen-asyncapi", "oapixconstgen"]
+    },
+    {
+      "title": "Go libraries",
+      "repos": ["servicepack", "common-go", "aichteeteapee", "elelem", "essessey", "vibecheck", "go-asyncapi", "ctxerrors", "ctxscope", "slogging", "commander", "goenv", "gonfiguration", "go-config-parser", "procscope", "gofindimpl"]
+    },
+    {
+      "title": "Radio and hardware",
+      "repos": ["piraterf", "gorpitx", "docker-planesnitch", "adsb-publisher-setup", "marlinfw-tools"]
+    },
+    {
+      "title": "Self-hosted services and MCP servers",
+      "repos": ["docker-mailbox", "docker-telethon-plus", "docker-hybrids3", "docker-proxq", "rankrat", "gitrakz", "docker-mediaproc", "docker-lockbox"]
+    },
+    {
+      "title": "Privacy, offline and networking",
+      "repos": ["offgrid-tools", "safe-stremio", "safe-stremio-web", "safe-transmission", "docker-openvpn-client", "docker-torssh", "pr0xteus"]
+    },
+    {
+      "title": "Sysadmin and DevOps",
+      "repos": ["persistent-sshfs", "ssh-tunnel-swarm", "auto-usb-storage-mount", "supervisor-shell-ui", "supervisor-config-gen", "reusable-github-workflows", "ez-pre-commit", "utils"]
+    }
+  ],
+  "exclude": ["psyb0t", "sponsors", "exiftoolgui", "jstts", "img-txt-insert", "ez-file-uploader", "user-scripts", "convert-tools", "srt-to-dataset", "ctf-scripts", "py-telegram-logger-client"]
+}
