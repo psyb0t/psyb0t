@@ -20,7 +20,7 @@
 ### Self-hosted AI services
 
 - [aigate](https://github.com/psyb0t/aigate) · Shell · ★ 16 · 2 forks: A self-hosted AI platform: inference, tool use, browser automation, image generation, speech synthesis, transcription, object storage, agentic code execution, and more, behind a single OpenAI-compatible endpoint. One docker-compose up.
-- [docker-talkies](https://github.com/psyb0t/docker-talkies) · Python · ★ 6 · 4 forks: Self-hosted Docker speech API for OpenAI-compatible transcription and text-to-speech, streaming ASR, voice cloning, phoneme recognition, and MCP.
+- [docker-talkies](https://github.com/psyb0t/docker-talkies) · Python · ★ 7 · 5 forks: Self-hosted Docker speech API for OpenAI-compatible transcription and text-to-speech, streaming ASR, voice cloning, phoneme recognition, and MCP.
 - [cli-llm-chat](https://github.com/psyb0t/cli-llm-chat) · Python · ★ 5: Welcome to the digital thunderdome, you keyboard-smashing lunatics! This ain't your grandma's chatbot, it's a CLI-powered, LLM-fueled beast! And guess what? It also supports Telegram integration right out of the box. Get ready to unleash the madness!
 - [docker-audiolla](https://github.com/psyb0t/docker-audiolla) · Python · ★ 5 · 3 forks: Self-hosted audio API in one Docker container. Stem separation, mastering, MIR (BPM/key/chords), audio→MIDI, text-to-music + SFX (MusicGen/Stable Audio/Riffusion/AudioLDM2), diarization, speech enhancement, restoration, embeddings + zero-shot tagging, workflows, async + webhooks. REST + MCP. CPU + CUDA.
 - [docker-qwenspeak](https://github.com/psyb0t/docker-qwenspeak) · Python · ★ 4: Qwen3-TTS over SSH. Pick a voice, clone a voice, design a voice - all through a YAML config piped via stdin. Models run locally, no API keys, no cloud bullshit.
@@ -44,8 +44,8 @@
 - [mt5-httpapi](https://github.com/psyb0t/mt5-httpapi) · Python · ★ 31 · 15 forks: MetaTrader 5 in a real Windows VM (Docker + QEMU/KVM), driven over REST + MCP: programmatic trading plus server-side TA. OHLC bars enriched with RSI/MACD/Bollinger/ADX/VWAP/Ichimoku/Order Blocks/FVGs (primitives, not signals). Typed MCP tools mirror the whole surface. Multi-broker, multi-account. No Wine bullshit.
 - [docker-wickworks](https://github.com/psyb0t/docker-wickworks) · Python · ★ 3 · 2 forks: Dumb-as-rocks OHLC analyzer. POST your bars + the indicators you want, get back exactly what you asked for. RSI/MACD/Bollinger/ADX/ATR/VWAP/Ichimoku, plus SMC primitives: Order Blocks, FVGs, BOS/CHoCH, swing structure. Stateless HTTP + MCP, no database, no AI-powered signals, no $97/mo Discord upsell.
 - [docker-mql-compiler](https://github.com/psyb0t/docker-mql-compiler) · Shell · ★ 1: Compile MQL4 and MQL5 on Linux: MetaEditor under Wine in Docker, one command, compile errors in your terminal.
+- [ibkr-httpapi](https://github.com/psyb0t/ibkr-httpapi) · Python · ★ 1: Interactive Brokers, curl-friendly, over REST + MCP. FastAPI + ib_async over a Linux-native IB Gateway: stocks/options/futures/forex/crypto/CFD contracts, quotes, historical bars, orders, positions, executions. Typed MCP tools mirror the whole surface. The IBKR half of mt5-httpapi: same shape, no Windows VM.
 - [MQL4-Utils](https://github.com/psyb0t/MQL4-Utils) · MQL5 · ★ 1: Header files to make life easier when building expert advisors for MetaTrader4 in MQL4
-- [ibkr-httpapi](https://github.com/psyb0t/ibkr-httpapi) · Python: Interactive Brokers, curl-friendly, over REST + MCP. FastAPI + ib_async over a Linux-native IB Gateway: stocks/options/futures/forex/crypto/CFD contracts, quotes, historical bars, orders, positions, executions. Typed MCP tools mirror the whole surface. The IBKR half of mt5-httpapi: same shape, no Windows VM.
 
 ### API clients
 
@@ -95,7 +95,7 @@
 - [go-twelvedata](https://github.com/psyb0t/go-twelvedata) · Shell: Unofficial Go client for the Twelve Data API, generated from the official OpenAPI spec.
 - [go-unstructured](https://github.com/psyb0t/go-unstructured) · Go: Unofficial Go client for the Unstructured platform and partition APIs, generated from the official OpenAPI specs.
 - [go-valtown](https://github.com/psyb0t/go-valtown) · Shell: Unofficial Go client for the Val Town API, generated from the official OpenAPI spec.
-- [go-vectara](https://github.com/psyb0t/go-vectara): Unofficial Go client for the Vectara API, generated from the official OpenAPI spec.
+- [go-vectara](https://github.com/psyb0t/go-vectara) · Go: Unofficial Go client for the Vectara API, generated from the official OpenAPI spec.
 - [go-vercel](https://github.com/psyb0t/go-vercel) · Shell: Unofficial Go client for the Vercel REST API, generated from the official OpenAPI spec.
 - [go-weave](https://github.com/psyb0t/go-weave) · Shell: Unofficial Go client for the W&B Weave API, generated from the official OpenAPI spec.
 - [go-writer-ai](https://github.com/psyb0t/go-writer-ai) · Shell: Unofficial Go client for the Writer API, generated from the official OpenAPI spec.
