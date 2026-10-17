@@ -42,7 +42,7 @@
 ### Trading
 
 - [mt5-httpapi](https://github.com/psyb0t/mt5-httpapi) · Python · ★ 31 · 15 forks: MetaTrader 5 in a real Windows VM (Docker + QEMU/KVM), driven over REST + MCP: programmatic trading plus server-side TA. OHLC bars enriched with RSI/MACD/Bollinger/ADX/VWAP/Ichimoku/Order Blocks/FVGs (primitives, not signals). Typed MCP tools mirror the whole surface. Multi-broker, multi-account. No Wine bullshit.
-- [docker-wickworks](https://github.com/psyb0t/docker-wickworks) · Python · ★ 3 · 2 forks: Dumb-as-rocks OHLC analyzer. POST your bars + the indicators you want, get back exactly what you asked for. RSI/MACD/Bollinger/ADX/ATR/VWAP/Ichimoku, plus SMC primitives: Order Blocks, FVGs, BOS/CHoCH, swing structure. Stateless HTTP + MCP, no database, no AI-powered signals, no $97/mo Discord upsell.
+- [docker-wickworks](https://github.com/psyb0t/docker-wickworks) · Python · ★ 4 · 2 forks: Dumb-as-rocks OHLC analyzer. POST your bars + the indicators you want, get back exactly what you asked for. RSI/MACD/Bollinger/ADX/ATR/VWAP/Ichimoku, plus SMC primitives: Order Blocks, FVGs, BOS/CHoCH, swing structure. Stateless HTTP + MCP, no database, no AI-powered signals, no $97/mo Discord upsell.
 - [docker-mql-compiler](https://github.com/psyb0t/docker-mql-compiler) · Shell · ★ 1: Compile MQL4 and MQL5 on Linux: MetaEditor under Wine in Docker, one command, compile errors in your terminal.
 - [ibkr-httpapi](https://github.com/psyb0t/ibkr-httpapi) · Python · ★ 1: Interactive Brokers, curl-friendly, over REST + MCP. FastAPI + ib_async over a Linux-native IB Gateway: stocks/options/futures/forex/crypto/CFD contracts, quotes, historical bars, orders, positions, executions. Typed MCP tools mirror the whole surface. The IBKR half of mt5-httpapi: same shape, no Windows VM.
 - [MQL4-Utils](https://github.com/psyb0t/MQL4-Utils) · MQL5 · ★ 1: Header files to make life easier when building expert advisors for MetaTrader4 in MQL4
@@ -59,6 +59,7 @@
 - [go-contextual-ai](https://github.com/psyb0t/go-contextual-ai) · Shell: Unofficial Go client for the Contextual AI API, generated from the official OpenAPI spec.
 - [go-coolify](https://github.com/psyb0t/go-coolify) · Shell: Unofficial Go client for the Coolify API, generated from the official OpenAPI spec.
 - [go-deribit](https://github.com/psyb0t/go-deribit) · Shell: Unofficial Go client for the Deribit REST and WebSocket APIs, generated from the official OpenAPI and AsyncAPI specs.
+- [go-dydx-indexer](https://github.com/psyb0t/go-dydx-indexer) · Shell: Unofficial Go client for the dYdX v4 Indexer API, generated from the official OpenAPI spec.
 - [go-elevenlabs](https://github.com/psyb0t/go-elevenlabs) · Shell: Unofficial Go client for the ElevenLabs API, generated from the official OpenAPI spec.
 - [go-etoro](https://github.com/psyb0t/go-etoro) · Shell: Unofficial Go clients for the eToro public REST and WebSocket APIs, generated from eToro's OpenAPI and AsyncAPI specs.
 - [go-exa](https://github.com/psyb0t/go-exa) · Shell: Unofficial Go client for the Exa search API, generated from the official OpenAPI spec.
