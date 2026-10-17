@@ -52,27 +52,32 @@ CATEGORY_HEADING = "###"
 
 SVG_NS = "http://www.w3.org/2000/svg"
 FONT = '-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif'
-FONT_SIZE_NAME = 14
-FONT_SIZE_TEXT = 12
+# Everything inside a card scales with SCALE so the text stays readable when
+# the card is drawn at half the README width on a narrow screen. CARD_W and PAD
+# stay fixed, so a larger SCALE wraps the description earlier and makes the
+# card taller.
+SCALE = 1.25
+FONT_SIZE_NAME = 14 * SCALE
+FONT_SIZE_TEXT = 12 * SCALE
 ELLIPSIS = "…"
 
 # Card geometry: two cards side by side fill the README column at about 1:1.
 CARD_W = 416
 CARD_RADIUS = 6
 PAD = 16
-ICON_SIZE = 16
-NAME_ROW_H = 20
-ROW_GAP = 8
-DESC_LINE_H = 18
+ICON_SIZE = 16 * SCALE
+NAME_ROW_H = 20 * SCALE
+ROW_GAP = 8 * SCALE
+DESC_LINE_H = 18 * SCALE
 DESC_MAX_LINES = 3
-DESC_CHARS_PER_LINE = 64
-FOOTER_GAP = 12
-FOOTER_H = 18
+DESC_CHARS_PER_LINE = round(64 / SCALE)
+FOOTER_GAP = 12 * SCALE
+FOOTER_H = 18 * SCALE
 LABEL_TEXT = "Public"
-LABEL_H = 18
-LABEL_PAD_X = 7
-LANGUAGE_DOT_R = 6
-FOOTER_ITEM_GAP = 16
+LABEL_H = 18 * SCALE
+LABEL_PAD_X = 7 * SCALE
+LANGUAGE_DOT_R = 6 * SCALE
+FOOTER_ITEM_GAP = 16 * SCALE
 CARD_IMG_WIDTH = "49%"
 
 THEME_LIGHT = "light"
@@ -419,7 +424,7 @@ def frame(root: ET.Element, width: int, height: int, colors: dict[str, str]) -> 
 
 
 def card_height(desc_lines: int) -> int:
-    return (
+    return round(
         PAD + NAME_ROW_H + ROW_GAP + max(desc_lines, 1) * DESC_LINE_H + FOOTER_GAP + FOOTER_H + PAD
     )
 
@@ -436,7 +441,13 @@ def render_card(repo: Repo, theme: str, desc_lines: int) -> str:
     height = card_height(desc_lines)
     root = svg_root(CARD_W, height)
     frame(root, CARD_W, height, colors)
-    svg(root, "path", transform=f"translate({PAD},{PAD + 2})", fill=colors["muted"], d=ICON_REPO)
+    svg(
+        root,
+        "path",
+        transform=f"translate({PAD},{PAD + 2 * SCALE}) scale({SCALE})",
+        fill=colors["muted"],
+        d=ICON_REPO,
+    )
 
     name_x = PAD + ICON_SIZE + ROW_GAP
     label_w = text_width(LABEL_TEXT, FONT_SIZE_TEXT) + 2 * LABEL_PAD_X
@@ -446,7 +457,7 @@ def render_card(repo: Repo, theme: str, desc_lines: int) -> str:
         "text",
         name,
         x=name_x,
-        y=PAD + 15,
+        y=PAD + 15 * SCALE,
         font_size=FONT_SIZE_NAME,
         font_weight=600,
         fill=colors["link"],
@@ -457,7 +468,7 @@ def render_card(repo: Repo, theme: str, desc_lines: int) -> str:
         root,
         "rect",
         x=f"{label_x:.1f}",
-        y=PAD + 1,
+        y=PAD + 1 * SCALE,
         width=f"{label_w:.1f}",
         height=LABEL_H,
         rx=LABEL_H / 2,
@@ -469,14 +480,14 @@ def render_card(repo: Repo, theme: str, desc_lines: int) -> str:
         "text",
         LABEL_TEXT,
         x=f"{label_x + label_w / 2:.1f}",
-        y=PAD + 14,
+        y=PAD + 14 * SCALE,
         font_size=FONT_SIZE_TEXT,
         font_weight=500,
         text_anchor="middle",
         fill=colors["muted"],
     )
 
-    desc_y = PAD + NAME_ROW_H + ROW_GAP + 13
+    desc_y = PAD + NAME_ROW_H + ROW_GAP + 13 * SCALE
     for i, line in enumerate(wrap(repo.description, DESC_CHARS_PER_LINE, desc_lines)):
         svg(
             root,
@@ -488,18 +499,18 @@ def render_card(repo: Repo, theme: str, desc_lines: int) -> str:
             fill=colors["muted"],
         )
 
-    render_footer(root, repo, colors, height - PAD - 4)
+    render_footer(root, repo, colors, height - PAD - 4 * SCALE)
     return ET.tostring(root, encoding="unicode")
 
 
-def render_footer(root: ET.Element, repo: Repo, colors: dict[str, str], baseline: int) -> None:
+def render_footer(root: ET.Element, repo: Repo, colors: dict[str, str], baseline: float) -> None:
     x = float(PAD)
     if repo.language:
         svg(
             root,
             "circle",
             cx=x + LANGUAGE_DOT_R,
-            cy=baseline - 4,
+            cy=baseline - 4 * SCALE,
             r=LANGUAGE_DOT_R,
             fill=LANGUAGE_COLORS.get(repo.language, DEFAULT_LANGUAGE_COLOR),
             stroke=LANGUAGE_DOT_STROKE,
@@ -508,12 +519,13 @@ def render_footer(root: ET.Element, repo: Repo, colors: dict[str, str], baseline
             root,
             "text",
             repo.language,
-            x=x + 2 * LANGUAGE_DOT_R + 4,
+            x=x + 2 * LANGUAGE_DOT_R + 4 * SCALE,
             y=baseline,
             font_size=FONT_SIZE_TEXT,
             fill=colors["muted"],
         )
-        x += 2 * LANGUAGE_DOT_R + 4 + text_width(repo.language, FONT_SIZE_TEXT) + FOOTER_ITEM_GAP
+        language_w = text_width(repo.language, FONT_SIZE_TEXT)
+        x += 2 * LANGUAGE_DOT_R + 4 * SCALE + language_w + FOOTER_ITEM_GAP
 
     for icon, count in ((ICON_STAR, repo.stars), (ICON_FORK, repo.forks)):
         if count == 0:
@@ -521,7 +533,7 @@ def render_footer(root: ET.Element, repo: Repo, colors: dict[str, str], baseline
         svg(
             root,
             "path",
-            transform=f"translate({x:.1f},{baseline - 12})",
+            transform=f"translate({x:.1f},{baseline - 12 * SCALE}) scale({SCALE})",
             fill=colors["muted"],
             d=icon,
         )
@@ -529,12 +541,12 @@ def render_footer(root: ET.Element, repo: Repo, colors: dict[str, str], baseline
             root,
             "text",
             f"{count:,}",
-            x=f"{x + ICON_SIZE + 4:.1f}",
+            x=f"{x + ICON_SIZE + 4 * SCALE:.1f}",
             y=baseline,
             font_size=FONT_SIZE_TEXT,
             fill=colors["muted"],
         )
-        x += ICON_SIZE + 4 + text_width(f"{count:,}", FONT_SIZE_TEXT) + FOOTER_ITEM_GAP
+        x += ICON_SIZE + 4 * SCALE + text_width(f"{count:,}", FONT_SIZE_TEXT) + FOOTER_ITEM_GAP
 
 
 def write_cards(repos: list[Repo]) -> None:
