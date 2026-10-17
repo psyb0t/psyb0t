@@ -20,10 +20,6 @@
       "repos": ["mt5-httpapi", "ibkr-httpapi", "docker-wickworks", "docker-mql-compiler", "MQL4-Utils"]
     },
     {
-      "title": "API clients",
-      "repos": ["go-spamcheck"]
-    },
-    {
       "title": "Code generation",
       "repos": ["gen-asyncapi", "oapixconstgen"]
     },
@@ -46,6 +42,10 @@
     {
       "title": "Sysadmin and DevOps",
       "repos": ["persistent-sshfs", "ssh-tunnel-swarm", "auto-usb-storage-mount", "supervisor-shell-ui", "supervisor-config-gen", "reusable-github-workflows", "ez-pre-commit"]
+    },
+    {
+      "title": "API clients",
+      "repos": ["go-spamcheck"]
     }
   ],
   "exclude": ["psyb0t", "sponsors", "utils", "exiftoolgui", "jstts", "img-txt-insert", "ez-file-uploader", "user-scripts", "convert-tools", "srt-to-dataset", "ctf-scripts", "py-telegram-logger-client"]
