@@ -47,63 +47,6 @@
 - [ibkr-httpapi](https://github.com/psyb0t/ibkr-httpapi) · Python · ★ 1: Interactive Brokers, curl-friendly, over REST + MCP. FastAPI + ib_async over a Linux-native IB Gateway: stocks/options/futures/forex/crypto/CFD contracts, quotes, historical bars, orders, positions, executions. Typed MCP tools mirror the whole surface. The IBKR half of mt5-httpapi: same shape, no Windows VM.
 - [MQL4-Utils](https://github.com/psyb0t/MQL4-Utils) · MQL5 · ★ 1: Header files to make life easier when building expert advisors for MetaTrader4 in MQL4
 
-### API clients
-
-- [go-spamcheck](https://github.com/psyb0t/go-spamcheck) · Go · ★ 2: Tiny Go client for Postmark's SpamCheck API: submit a raw email, get its SpamAssassin spam score and matched-rule breakdown. No account or API key required.
-- [go-bfl](https://github.com/psyb0t/go-bfl) · Go: Unofficial Go client for the Black Forest Labs (FLUX) API, generated from the official OpenAPI spec.
-- [go-browser-use](https://github.com/psyb0t/go-browser-use) · Go: Unofficial Go client for the Browser Use Cloud API, generated from the official OpenAPI spec.
-- [go-btse](https://github.com/psyb0t/go-btse) · Go: Unofficial Go client for the BTSE REST and WebSocket APIs, generated from the official OpenAPI and AsyncAPI specs.
-- [go-bunnynet](https://github.com/psyb0t/go-bunnynet) · Go: Unofficial Go client for the Bunny.net API, generated from the official OpenAPI spec.
-- [go-calcom](https://github.com/psyb0t/go-calcom) · Shell: Unofficial Go client for the Cal.com API v2, generated from the official OpenAPI spec.
-- [go-cerebras](https://github.com/psyb0t/go-cerebras) · Shell: Unofficial Go client for the Cerebras Inference API, generated from the official OpenAPI spec.
-- [go-contextual-ai](https://github.com/psyb0t/go-contextual-ai) · Shell: Unofficial Go client for the Contextual AI API, generated from the official OpenAPI spec.
-- [go-coolify](https://github.com/psyb0t/go-coolify) · Shell: Unofficial Go client for the Coolify API, generated from the official OpenAPI spec.
-- [go-deribit](https://github.com/psyb0t/go-deribit) · Shell: Unofficial Go client for the Deribit REST and WebSocket APIs, generated from the official OpenAPI and AsyncAPI specs.
-- [go-dydx-indexer](https://github.com/psyb0t/go-dydx-indexer) · Shell: Unofficial Go client for the dYdX v4 Indexer API, generated from the official OpenAPI spec.
-- [go-elevenlabs](https://github.com/psyb0t/go-elevenlabs) · Shell: Unofficial Go client for the ElevenLabs API, generated from the official OpenAPI spec.
-- [go-etoro](https://github.com/psyb0t/go-etoro) · Shell: Unofficial Go clients for the eToro public REST and WebSocket APIs, generated from eToro's OpenAPI and AsyncAPI specs.
-- [go-exa](https://github.com/psyb0t/go-exa) · Shell: Unofficial Go client for the Exa search API, generated from the official OpenAPI spec.
-- [go-fireworks](https://github.com/psyb0t/go-fireworks) · Shell: Unofficial Go client for the Fireworks AI API, generated from the official OpenAPI spec.
-- [go-hubspot](https://github.com/psyb0t/go-hubspot) · Shell: Unofficial Go client for the HubSpot API, generated from the official OpenAPI spec.
-- [go-ibkr](https://github.com/psyb0t/go-ibkr) · Shell: Unofficial Go client for the Interactive Brokers Web API, generated from the official OpenAPI spec.
-- [go-intercom](https://github.com/psyb0t/go-intercom) · Go: Unofficial Go client for the Intercom API, generated from the official OpenAPI spec.
-- [go-jina](https://github.com/psyb0t/go-jina) · Go: Unofficial Go client for the Jina AI APIs (embeddings, rerank, reader), generated from the official OpenAPI specs.
-- [go-julep](https://github.com/psyb0t/go-julep) · Shell: Unofficial Go client for the Julep API, generated from the official OpenAPI spec.
-- [go-kalshi](https://github.com/psyb0t/go-kalshi) · Go: Unofficial Go client for the Kalshi REST and WebSocket APIs, generated from the official OpenAPI and AsyncAPI specs.
-- [go-klavis](https://github.com/psyb0t/go-klavis) · Shell: Unofficial Go client for the Klavis AI API, generated from the official OpenAPI spec.
-- [go-label-studio](https://github.com/psyb0t/go-label-studio) · Shell: Unofficial Go client for the Label Studio API, generated from the official OpenAPI spec.
-- [go-latitude-llm](https://github.com/psyb0t/go-latitude-llm) · Shell: Unofficial Go client for the Latitude LLM API, generated from the official OpenAPI spec.
-- [go-llama-api](https://github.com/psyb0t/go-llama-api) · Shell: Unofficial Go client for the Meta Llama API, generated from the official OpenAPI spec.
-- [go-lovable](https://github.com/psyb0t/go-lovable) · Go: Unofficial Go client for the Lovable API, generated from the official OpenAPI spec.
-- [go-mem0](https://github.com/psyb0t/go-mem0) · Go: Unofficial Go client for the Mem0 API, generated from the official OpenAPI spec.
-- [go-mistral](https://github.com/psyb0t/go-mistral) · Shell: Unofficial Go client for the Mistral AI API, generated from the official OpenAPI spec.
-- [go-morphik](https://github.com/psyb0t/go-morphik) · Shell: Unofficial Go client for the Morphik API, generated from the official OpenAPI spec.
-- [go-opik](https://github.com/psyb0t/go-opik) · Shell: Unofficial Go client for the Opik API, generated from the official OpenAPI spec.
-- [go-perplexity](https://github.com/psyb0t/go-perplexity) · Shell: Unofficial Go client for the Perplexity API, generated from the official OpenAPI spec.
-- [go-polar](https://github.com/psyb0t/go-polar) · Shell: Unofficial Go client for the Polar API, generated from the official OpenAPI spec.
-- [go-postgrid](https://github.com/psyb0t/go-postgrid) · Go: Unofficial Go client for the PostGrid print and mail API, generated from the official OpenAPI spec.
-- [go-render-api](https://github.com/psyb0t/go-render-api) · Shell: Unofficial Go client for the Render API, generated from the official OpenAPI spec.
-- [go-revolut-business](https://github.com/psyb0t/go-revolut-business) · Shell: Unofficial Go client for the Revolut Business API, generated from the official OpenAPI spec.
-- [go-roark](https://github.com/psyb0t/go-roark) · Go: Unofficial Go client for the Roark API, generated from the official OpenAPI spec.
-- [go-runway](https://github.com/psyb0t/go-runway) · Shell: Unofficial Go client for the Runway API, generated from the official OpenAPI spec.
-- [go-skyvern](https://github.com/psyb0t/go-skyvern) · Shell: Unofficial Go client for the Skyvern API, generated from the official OpenAPI spec.
-- [go-solana-tracker](https://github.com/psyb0t/go-solana-tracker) · Shell: Unofficial Go client for the Solana Tracker REST and WebSocket APIs, generated from the official OpenAPI and AsyncAPI specs.
-- [go-supabase-management](https://github.com/psyb0t/go-supabase-management) · Shell: Unofficial Go client for the Supabase Management API, generated from the official OpenAPI spec.
-- [go-surge](https://github.com/psyb0t/go-surge) · Shell: Unofficial Go client for the Surge SMS API, generated from the official OpenAPI spec.
-- [go-tinker](https://github.com/psyb0t/go-tinker) · Shell: Unofficial Go client for the Thinking Machines Tinker API, generated from the official OpenAPI spec.
-- [go-togetherai](https://github.com/psyb0t/go-togetherai) · Go: Unofficial Go client for the Together AI API, generated from the official OpenAPI spec.
-- [go-trading212](https://github.com/psyb0t/go-trading212) · Shell: Unofficial Go client for the Trading 212 API, generated from the official OpenAPI spec.
-- [go-twelvedata](https://github.com/psyb0t/go-twelvedata) · Shell: Unofficial Go client for the Twelve Data API, generated from the official OpenAPI spec.
-- [go-unstructured](https://github.com/psyb0t/go-unstructured) · Go: Unofficial Go client for the Unstructured platform and partition APIs, generated from the official OpenAPI specs.
-- [go-valtown](https://github.com/psyb0t/go-valtown) · Shell: Unofficial Go client for the Val Town API, generated from the official OpenAPI spec.
-- [go-vectara](https://github.com/psyb0t/go-vectara) · Go: Unofficial Go client for the Vectara API, generated from the official OpenAPI spec.
-- [go-vercel](https://github.com/psyb0t/go-vercel) · Shell: Unofficial Go client for the Vercel REST API, generated from the official OpenAPI spec.
-- [go-weave](https://github.com/psyb0t/go-weave) · Shell: Unofficial Go client for the W&B Weave API, generated from the official OpenAPI spec.
-- [go-writer-ai](https://github.com/psyb0t/go-writer-ai) · Shell: Unofficial Go client for the Writer API, generated from the official OpenAPI spec.
-- [go-xai](https://github.com/psyb0t/go-xai) · Shell: Unofficial Go client for the xAI (Grok) API, generated from the official OpenAPI spec.
-- [go-zeroentropy](https://github.com/psyb0t/go-zeroentropy) · Go: Unofficial Go client for the ZeroEntropy API, generated from the official OpenAPI spec.
-- [go-zulip](https://github.com/psyb0t/go-zulip) · Go Template: Unofficial Go client for the Zulip API, generated from the official OpenAPI spec.
-
 ### Code generation
 
 - [gen-asyncapi](https://github.com/psyb0t/gen-asyncapi) · Go: Generates Go or TypeScript types, strict validation, union types and a WebSocket client from AsyncAPI 3 specs.
@@ -166,4 +109,61 @@
 - [supervisor-config-gen](https://github.com/psyb0t/supervisor-config-gen) · Shell · ★ 2: supervisor-config-gen is a bash script that simplifies the process of creating generic configuration files for Supervisor, allowing developers to focus on building software.
 - [reusable-github-workflows](https://github.com/psyb0t/reusable-github-workflows) · Shell · ★ 1: Security-hardened reusable GitHub Actions workflows for Go, Python and Docker CI/CD: lint, test, scan, build, publish, release. Plus ClawHub skill/plugin publishing, MCP registry publish, self-rendered SVG badges, Codeberg/GitLab/Gitee mirroring, and a PR gate for non-collaborators. One uses: line, no copy-paste.
 - [ez-pre-commit](https://github.com/psyb0t/ez-pre-commit) · Shell: A simple bash script to manage your pre-commit hooks in a Git repository.
+
+### API clients
+
+- [go-spamcheck](https://github.com/psyb0t/go-spamcheck) · Go · ★ 2: Tiny Go client for Postmark's SpamCheck API: submit a raw email, get its SpamAssassin spam score and matched-rule breakdown. No account or API key required.
+- [go-bfl](https://github.com/psyb0t/go-bfl) · Go: Unofficial Go client for the Black Forest Labs (FLUX) API, generated from the official OpenAPI spec.
+- [go-browser-use](https://github.com/psyb0t/go-browser-use) · Go: Unofficial Go client for the Browser Use Cloud API, generated from the official OpenAPI spec.
+- [go-btse](https://github.com/psyb0t/go-btse) · Go: Unofficial Go client for the BTSE REST and WebSocket APIs, generated from the official OpenAPI and AsyncAPI specs.
+- [go-bunnynet](https://github.com/psyb0t/go-bunnynet) · Go: Unofficial Go client for the Bunny.net API, generated from the official OpenAPI spec.
+- [go-calcom](https://github.com/psyb0t/go-calcom) · Shell: Unofficial Go client for the Cal.com API v2, generated from the official OpenAPI spec.
+- [go-cerebras](https://github.com/psyb0t/go-cerebras) · Shell: Unofficial Go client for the Cerebras Inference API, generated from the official OpenAPI spec.
+- [go-contextual-ai](https://github.com/psyb0t/go-contextual-ai) · Shell: Unofficial Go client for the Contextual AI API, generated from the official OpenAPI spec.
+- [go-coolify](https://github.com/psyb0t/go-coolify) · Shell: Unofficial Go client for the Coolify API, generated from the official OpenAPI spec.
+- [go-deribit](https://github.com/psyb0t/go-deribit) · Shell: Unofficial Go client for the Deribit REST and WebSocket APIs, generated from the official OpenAPI and AsyncAPI specs.
+- [go-dydx-indexer](https://github.com/psyb0t/go-dydx-indexer) · Shell: Unofficial Go client for the dYdX v4 Indexer API, generated from the official OpenAPI spec.
+- [go-elevenlabs](https://github.com/psyb0t/go-elevenlabs) · Shell: Unofficial Go client for the ElevenLabs API, generated from the official OpenAPI spec.
+- [go-etoro](https://github.com/psyb0t/go-etoro) · Shell: Unofficial Go clients for the eToro public REST and WebSocket APIs, generated from eToro's OpenAPI and AsyncAPI specs.
+- [go-exa](https://github.com/psyb0t/go-exa) · Shell: Unofficial Go client for the Exa search API, generated from the official OpenAPI spec.
+- [go-fireworks](https://github.com/psyb0t/go-fireworks) · Shell: Unofficial Go client for the Fireworks AI API, generated from the official OpenAPI spec.
+- [go-hubspot](https://github.com/psyb0t/go-hubspot) · Shell: Unofficial Go client for the HubSpot API, generated from the official OpenAPI spec.
+- [go-ibkr](https://github.com/psyb0t/go-ibkr) · Shell: Unofficial Go client for the Interactive Brokers Web API, generated from the official OpenAPI spec.
+- [go-intercom](https://github.com/psyb0t/go-intercom) · Go: Unofficial Go client for the Intercom API, generated from the official OpenAPI spec.
+- [go-jina](https://github.com/psyb0t/go-jina) · Go: Unofficial Go client for the Jina AI APIs (embeddings, rerank, reader), generated from the official OpenAPI specs.
+- [go-julep](https://github.com/psyb0t/go-julep) · Shell: Unofficial Go client for the Julep API, generated from the official OpenAPI spec.
+- [go-kalshi](https://github.com/psyb0t/go-kalshi) · Go: Unofficial Go client for the Kalshi REST and WebSocket APIs, generated from the official OpenAPI and AsyncAPI specs.
+- [go-klavis](https://github.com/psyb0t/go-klavis) · Shell: Unofficial Go client for the Klavis AI API, generated from the official OpenAPI spec.
+- [go-label-studio](https://github.com/psyb0t/go-label-studio) · Shell: Unofficial Go client for the Label Studio API, generated from the official OpenAPI spec.
+- [go-latitude-llm](https://github.com/psyb0t/go-latitude-llm) · Shell: Unofficial Go client for the Latitude LLM API, generated from the official OpenAPI spec.
+- [go-llama-api](https://github.com/psyb0t/go-llama-api) · Shell: Unofficial Go client for the Meta Llama API, generated from the official OpenAPI spec.
+- [go-lovable](https://github.com/psyb0t/go-lovable) · Go: Unofficial Go client for the Lovable API, generated from the official OpenAPI spec.
+- [go-mem0](https://github.com/psyb0t/go-mem0) · Go: Unofficial Go client for the Mem0 API, generated from the official OpenAPI spec.
+- [go-mistral](https://github.com/psyb0t/go-mistral) · Shell: Unofficial Go client for the Mistral AI API, generated from the official OpenAPI spec.
+- [go-morphik](https://github.com/psyb0t/go-morphik) · Shell: Unofficial Go client for the Morphik API, generated from the official OpenAPI spec.
+- [go-opik](https://github.com/psyb0t/go-opik) · Shell: Unofficial Go client for the Opik API, generated from the official OpenAPI spec.
+- [go-perplexity](https://github.com/psyb0t/go-perplexity) · Shell: Unofficial Go client for the Perplexity API, generated from the official OpenAPI spec.
+- [go-polar](https://github.com/psyb0t/go-polar) · Shell: Unofficial Go client for the Polar API, generated from the official OpenAPI spec.
+- [go-postgrid](https://github.com/psyb0t/go-postgrid) · Go: Unofficial Go client for the PostGrid print and mail API, generated from the official OpenAPI spec.
+- [go-render-api](https://github.com/psyb0t/go-render-api) · Shell: Unofficial Go client for the Render API, generated from the official OpenAPI spec.
+- [go-revolut-business](https://github.com/psyb0t/go-revolut-business) · Shell: Unofficial Go client for the Revolut Business API, generated from the official OpenAPI spec.
+- [go-roark](https://github.com/psyb0t/go-roark) · Go: Unofficial Go client for the Roark API, generated from the official OpenAPI spec.
+- [go-runway](https://github.com/psyb0t/go-runway) · Shell: Unofficial Go client for the Runway API, generated from the official OpenAPI spec.
+- [go-skyvern](https://github.com/psyb0t/go-skyvern) · Shell: Unofficial Go client for the Skyvern API, generated from the official OpenAPI spec.
+- [go-solana-tracker](https://github.com/psyb0t/go-solana-tracker) · Shell: Unofficial Go client for the Solana Tracker REST and WebSocket APIs, generated from the official OpenAPI and AsyncAPI specs.
+- [go-supabase-management](https://github.com/psyb0t/go-supabase-management) · Shell: Unofficial Go client for the Supabase Management API, generated from the official OpenAPI spec.
+- [go-surge](https://github.com/psyb0t/go-surge) · Shell: Unofficial Go client for the Surge SMS API, generated from the official OpenAPI spec.
+- [go-tinker](https://github.com/psyb0t/go-tinker) · Shell: Unofficial Go client for the Thinking Machines Tinker API, generated from the official OpenAPI spec.
+- [go-togetherai](https://github.com/psyb0t/go-togetherai) · Go: Unofficial Go client for the Together AI API, generated from the official OpenAPI spec.
+- [go-trading212](https://github.com/psyb0t/go-trading212) · Shell: Unofficial Go client for the Trading 212 API, generated from the official OpenAPI spec.
+- [go-twelvedata](https://github.com/psyb0t/go-twelvedata) · Shell: Unofficial Go client for the Twelve Data API, generated from the official OpenAPI spec.
+- [go-unstructured](https://github.com/psyb0t/go-unstructured) · Go: Unofficial Go client for the Unstructured platform and partition APIs, generated from the official OpenAPI specs.
+- [go-valtown](https://github.com/psyb0t/go-valtown) · Shell: Unofficial Go client for the Val Town API, generated from the official OpenAPI spec.
+- [go-vectara](https://github.com/psyb0t/go-vectara) · Go: Unofficial Go client for the Vectara API, generated from the official OpenAPI spec.
+- [go-vercel](https://github.com/psyb0t/go-vercel) · Shell: Unofficial Go client for the Vercel REST API, generated from the official OpenAPI spec.
+- [go-weave](https://github.com/psyb0t/go-weave) · Shell: Unofficial Go client for the W&B Weave API, generated from the official OpenAPI spec.
+- [go-writer-ai](https://github.com/psyb0t/go-writer-ai) · Shell: Unofficial Go client for the Writer API, generated from the official OpenAPI spec.
+- [go-xai](https://github.com/psyb0t/go-xai) · Shell: Unofficial Go client for the xAI (Grok) API, generated from the official OpenAPI spec.
+- [go-zeroentropy](https://github.com/psyb0t/go-zeroentropy) · Go: Unofficial Go client for the ZeroEntropy API, generated from the official OpenAPI spec.
+- [go-zulip](https://github.com/psyb0t/go-zulip) · Go Template: Unofficial Go client for the Zulip API, generated from the official OpenAPI spec.
 <!-- categories:end -->
