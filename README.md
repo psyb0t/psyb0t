@@ -77,7 +77,7 @@
 - [docker-planesnitch](https://github.com/psyb0t/docker-planesnitch) · Python · ★ 19 · 2 forks: Snitches on every interesting aircraft that dares fly near your locations: military jets, government spooks, emergency squawks, sketchy low-flyers, or whatever the fuck you tell it to watch for. Monitor multiple locations at once: your house, your office, grandma's house, Area 51, whatever.
 - [adsb-publisher-setup](https://github.com/psyb0t/adsb-publisher-setup) · Shell · ★ 1 · 2 forks: One-script setup for receiving ADS-B aircraft data with an RTL-SDR dongle and publishing it to multiple flight tracking aggregators simultaneously.  Deploys a Docker Compose stack with automatic configuration, SDR detection, and optional Grafana dashboards.
 - [gorpitx](https://github.com/psyb0t/gorpitx) · Go · 1 fork: Go wrapper for rpitx: subprocess-managed RF transmission via a singleton. Covers FM/RDS, Morse, POCSAG, FT8, SSTV, RTTY, FSK, IQ and more (12 modules). Dev-mode mocks execution so you can test without keying an actual transmitter.
-- [marlinfw-tools](https://github.com/psyb0t/marlinfw-tools) · Python
+- [marlinfw-tools](https://github.com/psyb0t/marlinfw-tools) · Python: Talk straight to a Marlin 3D printer over USB serial from a locked-down Docker container: dump firmware, settings, temps and endstops, record live state, list and run SD card prints, and change one setting when you mean it. No vendor cloud, no host Python.
 
 ### Self-hosted services and MCP servers
 
