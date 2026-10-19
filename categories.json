@@ -33,7 +33,7 @@
     },
     {
       "title": "Self-hosted services and MCP servers",
-      "repos": ["docker-mailbox", "docker-telethon-plus", "docker-hybrids3", "docker-proxq", "rankrat", "gitrakz", "docker-mediaproc", "docker-lockbox"]
+      "repos": ["docker-mailbox", "docker-telethon-plus", "docker-hybrids3", "docker-proxq", "rankrat", "gitrakz", "docker-mediaproc", "docker-lockbox", "docker-monero", "docker-reverse-engineer-anything"]
     },
     {
       "title": "Privacy, offline and networking",
