@@ -14,7 +14,7 @@
 - [codex-plugin-loop](https://github.com/psyb0t/codex-plugin-loop) · Makefile · ★ 1: Codex CLI plugin that repeats instructions at a fixed interval in an open session. Holds one turn open on the clock.sleep tool, resumes itself when the turn gets killed, and stops only on an explicit $loop:stop.
 - [agents](https://github.com/psyb0t/agents): One marketplace for every psyb0t agent skill and plugin, installable from Claude Code and Codex.
 - [docker-aicodebox](https://github.com/psyb0t/docker-aicodebox) · Python: Base Docker image that wraps any terminal AI coding agent in an HTTP API, an OpenAI-compatible endpoint, an MCP server, a Telegram bot and a cron scheduler through a short adapter.
-- [docker-codexbox](https://github.com/psyb0t/docker-codexbox) · Python: OpenAI Codex CLI in a Docker image built on aicodebox, with an HTTP API, an OpenAI-compatible endpoint, an MCP server, a Telegram bot and a cron scheduler, in minimal or full-toolchain variants.
+- [docker-codexbox](https://github.com/psyb0t/docker-codexbox) · Shell: OpenAI Codex CLI in a Docker image built on aicodebox, with an HTTP API, an OpenAI-compatible endpoint, an MCP server, a Telegram bot and a cron scheduler, in minimal or full-toolchain variants.
 - [peen](https://github.com/psyb0t/peen) · Go: Coding agent with a controller: start it once, then open any project from its browser UI or over WebSocket. Each project gets its own agent session in a process or container, follows the project's AGENTS.md, rules, skills and hooks, and every tool call and model exchange lands in SQLite.
 
 ### Self-hosted AI services
