@@ -115,7 +115,7 @@
 ### API clients
 
 - [go-spamcheck](https://github.com/psyb0t/go-spamcheck) · Go · ★ 2: Tiny Go client for Postmark's SpamCheck API: submit a raw email, get its SpamAssassin spam score and matched-rule breakdown. No account or API key required.
-- [go-bfl](https://github.com/psyb0t/go-bfl) · Go: Unofficial Go client for the Black Forest Labs (FLUX) API, generated from the official OpenAPI spec.
+- [go-bfl](https://github.com/psyb0t/go-bfl) · Shell: Unofficial Go client for the Black Forest Labs (FLUX) API, generated from the official OpenAPI spec.
 - [go-browser-use](https://github.com/psyb0t/go-browser-use) · Go: Unofficial Go client for the Browser Use Cloud API, generated from the official OpenAPI spec.
 - [go-btse](https://github.com/psyb0t/go-btse) · Go: Unofficial Go client for the BTSE REST and WebSocket APIs, generated from the official OpenAPI and AsyncAPI specs.
 - [go-bunnynet](https://github.com/psyb0t/go-bunnynet) · Go: Unofficial Go client for the Bunny.net API, generated from the official OpenAPI spec.
@@ -133,7 +133,6 @@
 - [go-ibkr](https://github.com/psyb0t/go-ibkr) · Shell: Unofficial Go client for the Interactive Brokers Web API, generated from the official OpenAPI spec.
 - [go-intercom](https://github.com/psyb0t/go-intercom) · Go: Unofficial Go client for the Intercom API, generated from the official OpenAPI spec.
 - [go-jina](https://github.com/psyb0t/go-jina) · Go: Unofficial Go client for the Jina AI APIs (embeddings, rerank, reader), generated from the official OpenAPI specs.
-- [go-julep](https://github.com/psyb0t/go-julep) · Shell: Unofficial Go client for the Julep API, generated from the official OpenAPI spec.
 - [go-kalshi](https://github.com/psyb0t/go-kalshi) · Go: Unofficial Go client for the Kalshi REST and WebSocket APIs, generated from the official OpenAPI and AsyncAPI specs.
 - [go-klavis](https://github.com/psyb0t/go-klavis) · Shell: Unofficial Go client for the Klavis AI API, generated from the official OpenAPI spec.
 - [go-label-studio](https://github.com/psyb0t/go-label-studio) · Shell: Unofficial Go client for the Label Studio API, generated from the official OpenAPI spec.
@@ -154,7 +153,7 @@
 - [go-skyvern](https://github.com/psyb0t/go-skyvern) · Shell: Unofficial Go client for the Skyvern API, generated from the official OpenAPI spec.
 - [go-solana-tracker](https://github.com/psyb0t/go-solana-tracker) · Shell: Unofficial Go client for the Solana Tracker REST and WebSocket APIs, generated from the official OpenAPI and AsyncAPI specs.
 - [go-supabase-management](https://github.com/psyb0t/go-supabase-management) · Shell: Unofficial Go client for the Supabase Management API, generated from the official OpenAPI spec.
-- [go-surge](https://github.com/psyb0t/go-surge) · Shell: Unofficial Go client for the Surge SMS API, generated from the official OpenAPI spec.
+- [go-surge](https://github.com/psyb0t/go-surge) · Go: Unofficial Go client for the Surge SMS API, generated from the official OpenAPI spec.
 - [go-tinker](https://github.com/psyb0t/go-tinker) · Shell: Unofficial Go client for the Thinking Machines Tinker API, generated from the official OpenAPI spec.
 - [go-togetherai](https://github.com/psyb0t/go-togetherai) · Go: Unofficial Go client for the Together AI API, generated from the official OpenAPI spec.
 - [go-trading212](https://github.com/psyb0t/go-trading212) · Shell: Unofficial Go client for the Trading 212 API, generated from the official OpenAPI spec.
