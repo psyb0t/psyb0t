@@ -140,7 +140,7 @@
 - [go-llama-api](https://github.com/psyb0t/go-llama-api) · Shell: Unofficial Go client for the Meta Llama API, generated from the official OpenAPI spec.
 - [go-lovable](https://github.com/psyb0t/go-lovable) · Go: Unofficial Go client for the Lovable API, generated from the official OpenAPI spec.
 - [go-mem0](https://github.com/psyb0t/go-mem0) · Go: Unofficial Go client for the Mem0 API, generated from the official OpenAPI spec.
-- [go-mistral](https://github.com/psyb0t/go-mistral) · Shell: Unofficial Go client for the Mistral AI API, generated from the official OpenAPI spec.
+- [go-mistral](https://github.com/psyb0t/go-mistral) · Go: Unofficial Go client for the Mistral AI API, generated from the official OpenAPI spec.
 - [go-morphik](https://github.com/psyb0t/go-morphik) · Shell: Unofficial Go client for the Morphik API, generated from the official OpenAPI spec.
 - [go-opik](https://github.com/psyb0t/go-opik) · Shell: Unofficial Go client for the Opik API, generated from the official OpenAPI spec.
 - [go-perplexity](https://github.com/psyb0t/go-perplexity) · Shell: Unofficial Go client for the Perplexity API, generated from the official OpenAPI spec.
