@@ -81,8 +81,8 @@
 
 ### Self-hosted services and MCP servers
 
+- [docker-mailbox](https://github.com/psyb0t/docker-mailbox) · Python · ★ 6 · 4 forks: Self-hosted HTTP API and MCP server that reads, organizes, drafts, replies to and sends mail across multiple IMAP/SMTP accounts, with per-token scopes, send limits, an audit log and signed new-mail webhooks.
 - [docker-hybrids3](https://github.com/psyb0t/docker-hybrids3) · Shell · ★ 5 · 1 fork: Lightweight object storage that speaks S3 (boto3/AWS SDK compatible), plain HTTP, and MCP. SQLite for metadata, flat files on disk.
-- [docker-mailbox](https://github.com/psyb0t/docker-mailbox) · Python · ★ 5 · 4 forks: Self-hosted HTTP API and MCP server that reads, organizes, drafts, replies to and sends mail across multiple IMAP/SMTP accounts, with per-token scopes, send limits, an audit log and signed new-mail webhooks.
 - [docker-telethon-plus](https://github.com/psyb0t/docker-telethon-plus) · Python · ★ 5 · 1 fork: Your Telegram account, but it takes HTTP requests. Wraps Telethon, the real MTProto userbot client, not that neutered Bot API garbage, behind a JSON HTTP API and a Model Context Protocol endpoint.
 - [docker-reverse-engineer-anything](https://github.com/psyb0t/docker-reverse-engineer-anything) · TypeScript · ★ 4 · 1 fork: REA (Reverse Engineer Anything) in Docker: Android APK decompilation with JADX, Apktool and adb built in, Ghidra on demand, behind a token-guarded Streamable HTTP MCP endpoint. Also stdio MCP and a CLI.
 - [docker-lockbox](https://github.com/psyb0t/docker-lockbox) · Shell · ★ 1: Locked-down SSH container with sandboxed file operations. Use as a base image to build your own dedicated tool containers - just provide a list of allowed commands and install your binaries. No shell access, no injection bullshit.
