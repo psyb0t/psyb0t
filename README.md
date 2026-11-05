@@ -153,7 +153,7 @@
 - [go-skyvern](https://github.com/psyb0t/go-skyvern) · Shell: Unofficial Go client for the Skyvern API, generated from the official OpenAPI spec.
 - [go-solana-tracker](https://github.com/psyb0t/go-solana-tracker) · Shell: Unofficial Go client for the Solana Tracker REST and WebSocket APIs, generated from the official OpenAPI and AsyncAPI specs.
 - [go-supabase-management](https://github.com/psyb0t/go-supabase-management) · Shell: Unofficial Go client for the Supabase Management API, generated from the official OpenAPI spec.
-- [go-surge](https://github.com/psyb0t/go-surge) · Go: Unofficial Go client for the Surge SMS API, generated from the official OpenAPI spec.
+- [go-surge](https://github.com/psyb0t/go-surge) · Shell: Unofficial Go client for the Surge SMS API, generated from the official OpenAPI spec.
 - [go-tinker](https://github.com/psyb0t/go-tinker) · Shell: Unofficial Go client for the Thinking Machines Tinker API, generated from the official OpenAPI spec.
 - [go-togetherai](https://github.com/psyb0t/go-togetherai) · Go: Unofficial Go client for the Together AI API, generated from the official OpenAPI spec.
 - [go-trading212](https://github.com/psyb0t/go-trading212) · Shell: Unofficial Go client for the Trading 212 API, generated from the official OpenAPI spec.
