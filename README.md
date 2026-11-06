@@ -12,10 +12,10 @@
 - [docker-claudebox](https://github.com/psyb0t/docker-claudebox) · Shell · ★ 23 · 5 forks: Claude Code in a Docker image built on aicodebox, with an HTTP API, an OpenAI-compatible endpoint, an MCP server, a Telegram bot and a cron scheduler, in minimal or full-toolchain variants.
 - [docker-pibox](https://github.com/psyb0t/docker-pibox) · Shell · ★ 3: pi-coding-agent in a Docker image built on aicodebox, with an HTTP API, an OpenAI-compatible endpoint, an MCP server, a Telegram bot and a cron scheduler.
 - [codex-plugin-loop](https://github.com/psyb0t/codex-plugin-loop) · Makefile · ★ 1: Codex CLI plugin that repeats instructions at a fixed interval in an open session. Holds one turn open on the clock.sleep tool, resumes itself when the turn gets killed, and stops only on an explicit $loop:stop.
+- [peen](https://github.com/psyb0t/peen) · Go · ★ 1: Coding agent built as a server: open any project from the browser UI, the peen command line, a GitHub Action, or over WebSocket. Each project runs in its own process or container, follows its AGENTS.md, rules, skills and hooks, survives restarts and crashes, and every tool call and model exchange lands in SQLite.
 - [agents](https://github.com/psyb0t/agents): One marketplace for every psyb0t agent skill and plugin, installable from Claude Code and Codex.
 - [docker-aicodebox](https://github.com/psyb0t/docker-aicodebox) · Python: Base Docker image that wraps any terminal AI coding agent in an HTTP API, an OpenAI-compatible endpoint, an MCP server, a Telegram bot and a cron scheduler through a short adapter.
 - [docker-codexbox](https://github.com/psyb0t/docker-codexbox) · Shell: OpenAI Codex CLI in a Docker image built on aicodebox, with an HTTP API, an OpenAI-compatible endpoint, an MCP server, a Telegram bot and a cron scheduler, in minimal or full-toolchain variants.
-- [peen](https://github.com/psyb0t/peen) · Go: Coding agent built as a server: open any project from the browser UI, the peen command line, a GitHub Action, or over WebSocket. Each project runs in its own process or container, follows its AGENTS.md, rules, skills and hooks, survives restarts and crashes, and every tool call and model exchange lands in SQLite.
 
 ### Self-hosted AI services
 
@@ -36,8 +36,8 @@
 
 - [docker-stealthy-auto-browse](https://github.com/psyb0t/docker-stealthy-auto-browse) · Python · ★ 97 · 16 forks: Stealth browser automation that actually works. Runs Camoufox (custom Firefox) in Docker with zero Chrome DevTools Protocol exposure, real OS-level mouse and keyboard input via PyAutoGUI, and a JSON HTTP API + MCP server to control it all remotely. Watch it live via noVNC.
 - [uzdabrawza](https://github.com/psyb0t/uzdabrawza) · Python · ★ 12: The Anal-Queen of AI Browser Automation 🏴‍☠️ A beautifully fucked-up Skynet-powered browser automation script that harnesses neural brainfuck and machine learning chaos to give zero shits about anything while somehow still working perfectly.
+- [dikciz-launcher](https://github.com/psyb0t/dikciz-launcher) · Kotlin · ★ 1: Programmable Android launcher with native pages, HTML widgets, Lua automation, and WebSocket/MCP phone control over USB, Wi-Fi, or Tailscale.
 - [android-lab](https://github.com/psyb0t/android-lab) · Shell: Build Android shit, boot a private emulator and poke its UI through Docker. Keep the SDK off your host.
-- [dikciz-launcher](https://github.com/psyb0t/dikciz-launcher) · Kotlin: Programmable Android launcher with native pages, HTML widgets, Lua automation, and WebSocket/MCP phone control over USB, Wi-Fi, or Tailscale.
 
 ### Trading
 
@@ -115,6 +115,7 @@
 ### API clients
 
 - [go-spamcheck](https://github.com/psyb0t/go-spamcheck) · Go · ★ 2: Tiny Go client for Postmark's SpamCheck API: submit a raw email, get its SpamAssassin spam score and matched-rule breakdown. No account or API key required.
+- [go-twelvedata](https://github.com/psyb0t/go-twelvedata) · Shell · ★ 1: Unofficial Go client for the Twelve Data API, generated from the official OpenAPI spec.
 - [go-bfl](https://github.com/psyb0t/go-bfl) · Shell: Unofficial Go client for the Black Forest Labs (FLUX) API, generated from the official OpenAPI spec.
 - [go-browser-use](https://github.com/psyb0t/go-browser-use) · Go: Unofficial Go client for the Browser Use Cloud API, generated from the official OpenAPI spec.
 - [go-btse](https://github.com/psyb0t/go-btse) · Go: Unofficial Go client for the BTSE REST and WebSocket APIs, generated from the official OpenAPI and AsyncAPI specs.
@@ -157,7 +158,6 @@
 - [go-tinker](https://github.com/psyb0t/go-tinker) · Shell: Unofficial Go client for the Thinking Machines Tinker API, generated from the official OpenAPI spec.
 - [go-togetherai](https://github.com/psyb0t/go-togetherai) · Go: Unofficial Go client for the Together AI API, generated from the official OpenAPI spec.
 - [go-trading212](https://github.com/psyb0t/go-trading212) · Shell: Unofficial Go client for the Trading 212 API, generated from the official OpenAPI spec.
-- [go-twelvedata](https://github.com/psyb0t/go-twelvedata) · Shell: Unofficial Go client for the Twelve Data API, generated from the official OpenAPI spec.
 - [go-unstructured](https://github.com/psyb0t/go-unstructured) · Go: Unofficial Go client for the Unstructured platform and partition APIs, generated from the official OpenAPI specs.
 - [go-valtown](https://github.com/psyb0t/go-valtown) · Shell: Unofficial Go client for the Val Town API, generated from the official OpenAPI spec.
 - [go-vectara](https://github.com/psyb0t/go-vectara) · Go: Unofficial Go client for the Vectara API, generated from the official OpenAPI spec.
