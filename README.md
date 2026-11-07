@@ -36,7 +36,7 @@
 
 - [docker-stealthy-auto-browse](https://github.com/psyb0t/docker-stealthy-auto-browse) · Python · ★ 97 · 16 forks: Stealth browser automation that actually works. Runs Camoufox (custom Firefox) in Docker with zero Chrome DevTools Protocol exposure, real OS-level mouse and keyboard input via PyAutoGUI, and a JSON HTTP API + MCP server to control it all remotely. Watch it live via noVNC.
 - [uzdabrawza](https://github.com/psyb0t/uzdabrawza) · Python · ★ 12: The Anal-Queen of AI Browser Automation 🏴‍☠️ A beautifully fucked-up Skynet-powered browser automation script that harnesses neural brainfuck and machine learning chaos to give zero shits about anything while somehow still working perfectly.
-- [dikciz-launcher](https://github.com/psyb0t/dikciz-launcher) · Kotlin · ★ 1: Programmable Android launcher with native pages, HTML widgets, Lua automation, and WebSocket/MCP phone control over USB, Wi-Fi, or Tailscale.
+- [dikciz-launcher](https://github.com/psyb0t/dikciz-launcher) · Kotlin · ★ 2: Programmable Android launcher and custom app runtime with HTML/CSS/JS interfaces, Lua/JavaScript backends, AI chat, and phone automation over MCP, HTTP and WebSocket.
 - [android-lab](https://github.com/psyb0t/android-lab) · Shell: Build Android shit, boot a private emulator and poke its UI through Docker. Keep the SDK off your host.
 
 ### Trading
