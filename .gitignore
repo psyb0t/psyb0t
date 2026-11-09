@@ -6,3 +6,6 @@ git-update.sh
 git-update.sh.debot
 .mypy_cache/
 .telemetry/
+
+# Local agent and editor settings.
+*.local.json

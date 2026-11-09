@@ -289,8 +289,14 @@ def load_categories() -> dict[str, Any]:
 
 def categorize(repos: list[Repo], config: dict[str, Any]) -> list[Category]:
     """Each public repo goes under the category that names it, else the
-    category its topics map to. Excluded and unmatched repos are left out."""
-    by_name = {r.name: r for r in repos if not r.is_fork and not r.is_archived}
+    category its topics map to. Excluded and unmatched repos are left out.
+    Forks are left out too, unless `include_forks` names them."""
+    included_forks = set(config.get("include_forks", []))
+    by_name = {
+        r.name: r
+        for r in repos
+        if not r.is_archived and (not r.is_fork or r.name in included_forks)
+    }
     excluded = set(config.get("exclude", []))
     titles = [c["title"] for c in config["categories"]]
     members: dict[str, list[Repo]] = {title: [] for title in titles}
@@ -333,6 +339,8 @@ def categorize(repos: list[Repo], config: dict[str, Any]) -> list[Category]:
 
 def category_line(repo: Repo) -> str:
     facts = [repo.language] if repo.language else []
+    if repo.is_fork:
+        facts.append("fork")
     if repo.stars:
         facts.append(f"★ {repo.stars:,}")
     if repo.forks:

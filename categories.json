@@ -25,7 +25,7 @@
     },
     {
       "title": "Go libraries and tooling",
-      "repos": ["servicepack", "common-go", "aichteeteapee", "elelem", "essessey", "vibecheck", "go-asyncapi", "ctxerrors", "ctxscope", "slogging", "commander", "goenv", "gonfiguration", "go-config-parser", "procscope", "gofindimpl"]
+      "repos": ["servicepack", "common-go", "aichteeteapee", "elelem", "essessey", "vibecheck", "go-asyncapi", "ctxerrors", "ctxscope", "slogging", "commander", "goenv", "gonfiguration", "go-config-parser", "procscope", "gofindimpl", "go-workflows"]
     },
     {
       "title": "Radio and hardware",
@@ -48,5 +48,6 @@
       "repos": ["go-spamcheck"]
     }
   ],
-  "exclude": ["psyb0t", "sponsors", "utils", "exiftoolgui", "jstts", "img-txt-insert", "ez-file-uploader", "user-scripts", "convert-tools", "srt-to-dataset", "ctf-scripts", "py-telegram-logger-client"]
+  "exclude": ["psyb0t", "sponsors", "utils", "exiftoolgui", "jstts", "img-txt-insert", "ez-file-uploader", "user-scripts", "convert-tools", "srt-to-dataset", "ctf-scripts", "py-telegram-logger-client"],
+  "include_forks": ["go-workflows"]
 }
