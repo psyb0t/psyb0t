@@ -175,6 +175,7 @@ class Repo:
     is_fork: bool
     is_archived: bool
     topics: list[str]
+    has_pages: bool = False
 
 
 @dataclass
@@ -258,6 +259,7 @@ def fetch_repos(user: str) -> list[Repo]:
             is_fork=r["fork"],
             is_archived=r["archived"],
             topics=r.get("topics") or [],
+            has_pages=bool(r.get("has_pages")),
         )
         for r in raw
     ]
@@ -337,6 +339,16 @@ def categorize(repos: list[Repo], config: dict[str, Any]) -> list[Category]:
     return categories
 
 
+def docs_url(repo: Repo) -> str | None:
+    """Link to the repo's GitHub Pages docs site, served under the owner's
+    user site. The user site repo itself has no project site."""
+    owner = repo.url.rstrip("/").split("/")[-2]
+    user_site = f"{owner}.github.io"
+    if not repo.has_pages or repo.name.lower() == user_site.lower():
+        return None
+    return f"https://{user_site}/{repo.name}/"
+
+
 def category_line(repo: Repo) -> str:
     facts = [repo.language] if repo.language else []
     if repo.is_fork:
@@ -346,6 +358,9 @@ def category_line(repo: Repo) -> str:
     if repo.forks:
         facts.append(count_noun(repo.forks, "fork"))
     meta = "".join(f" · {fact}" for fact in facts)
+    docs = docs_url(repo)
+    if docs:
+        meta += f" · [docs]({docs})"
     description = f": {repo.description.strip()}" if repo.description else ""
     return f"- [{repo.name}]({repo.url}){meta}{description}"
 
