@@ -13,7 +13,7 @@
     },
     {
       "title": "Browser and device automation",
-      "repos": ["docker-stealthy-auto-browse", "uzdabrawza", "android-lab", "dikciz-launcher"]
+      "repos": ["docker-stealthy-auto-browse", "docker-auto-linux-desk", "uzdabrawza", "android-lab", "dikciz-launcher"]
     },
     {
       "title": "Trading",
