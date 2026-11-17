@@ -38,6 +38,7 @@
 - [uzdabrawza](https://github.com/psyb0t/uzdabrawza) · Python · ★ 12: The Anal-Queen of AI Browser Automation 🏴‍☠️ A beautifully fucked-up Skynet-powered browser automation script that harnesses neural brainfuck and machine learning chaos to give zero shits about anything while somehow still working perfectly.
 - [dikciz-launcher](https://github.com/psyb0t/dikciz-launcher) · Kotlin · ★ 2 · [docs](https://psyb0t.github.io/dikciz-launcher/): Programmable Android launcher and custom app runtime with HTML/CSS/JS interfaces, Lua/JavaScript backends, AI chat, and phone automation over MCP, HTTP and WebSocket.
 - [android-lab](https://github.com/psyb0t/android-lab) · Shell: Build Android shit, boot a private emulator and poke its UI through Docker. Keep the SDK off your host.
+- [docker-auto-linux-desk](https://github.com/psyb0t/docker-auto-linux-desk) · Python · [docs](https://psyb0t.github.io/docker-auto-linux-desk/): Full Linux desktop automation in Docker. An Xvfb + Openbox desktop you drive over a JSON HTTP API and MCP server: humanized OS-level mouse and keyboard input, window control, keyboard shortcuts, app launching, shell commands, screenshots and screen recording. Watch it live via noVNC. Base image for stealthy-auto-browse.
 
 ### Trading
 
