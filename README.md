@@ -117,6 +117,7 @@
 
 - [go-spamcheck](https://github.com/psyb0t/go-spamcheck) · Go · ★ 2: Tiny Go client for Postmark's SpamCheck API: submit a raw email, get its SpamAssassin spam score and matched-rule breakdown. No account or API key required.
 - [go-mistral](https://github.com/psyb0t/go-mistral) · Go · ★ 1: Unofficial Go client for the Mistral AI API, generated from the official OpenAPI spec.
+- [go-polar](https://github.com/psyb0t/go-polar) · Shell · ★ 1: Unofficial Go client for the Polar API, generated from the official OpenAPI spec.
 - [go-twelvedata](https://github.com/psyb0t/go-twelvedata) · Shell · ★ 1: Unofficial Go client for the Twelve Data API, generated from the official OpenAPI spec.
 - [go-bfl](https://github.com/psyb0t/go-bfl) · Shell: Unofficial Go client for the Black Forest Labs (FLUX) API, generated from the official OpenAPI spec.
 - [go-browser-use](https://github.com/psyb0t/go-browser-use) · Go: Unofficial Go client for the Browser Use Cloud API, generated from the official OpenAPI spec.
@@ -146,7 +147,6 @@
 - [go-morphik](https://github.com/psyb0t/go-morphik) · Shell: Unofficial Go client for the Morphik API, generated from the official OpenAPI spec.
 - [go-opik](https://github.com/psyb0t/go-opik) · Shell: Unofficial Go client for the Opik API, generated from the official OpenAPI spec.
 - [go-perplexity](https://github.com/psyb0t/go-perplexity) · Shell: Unofficial Go client for the Perplexity API, generated from the official OpenAPI spec.
-- [go-polar](https://github.com/psyb0t/go-polar) · Shell: Unofficial Go client for the Polar API, generated from the official OpenAPI spec.
 - [go-postgrid](https://github.com/psyb0t/go-postgrid) · Go: Unofficial Go client for the PostGrid print and mail API, generated from the official OpenAPI spec.
 - [go-render-api](https://github.com/psyb0t/go-render-api) · Shell: Unofficial Go client for the Render API, generated from the official OpenAPI spec.
 - [go-revolut-business](https://github.com/psyb0t/go-revolut-business) · Shell: Unofficial Go client for the Revolut Business API, generated from the official OpenAPI spec.
