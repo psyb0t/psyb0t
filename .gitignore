@@ -9,3 +9,31 @@ git-update.sh.debot
 
 # Local agent and editor settings.
 *.local.json
+CLAUDE.local.md
+CODEX.local.md
+.research_files/
+.agent_notes/
+.agent_knowledge/
+PLAN.md
+implplan.md
+NOTES.md
+TODO.md
+WIP.md
+.env
+.env.local
+.env.*
+!.env.example
+coverage.txt
+coverage.out
+profile.out
+.cover/
+htmlcov/
+.vscode/
+.idea/
+.editorconfig
+.envrc
+.tool-versions
+.python-version
+.nvmrc
+pyrightconfig.json
+.venv/
