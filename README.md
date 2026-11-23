@@ -82,7 +82,7 @@
 
 ### Self-hosted services and MCP servers
 
-- [docker-mailbox](https://github.com/psyb0t/docker-mailbox) · Python · ★ 9 · 4 forks · [docs](https://psyb0t.github.io/docker-mailbox/): Self-hosted HTTP API and MCP server that reads, organizes, drafts, replies to and sends mail across multiple IMAP/SMTP accounts, with per-token scopes, send limits, an audit log and signed new-mail webhooks.
+- [docker-mailbox](https://github.com/psyb0t/docker-mailbox) · Python · ★ 9 · 5 forks · [docs](https://psyb0t.github.io/docker-mailbox/): Self-hosted HTTP API and MCP server that reads, organizes, drafts, replies to and sends mail across multiple IMAP/SMTP accounts, with per-token scopes, send limits, an audit log and signed new-mail webhooks.
 - [docker-reverse-engineer-anything](https://github.com/psyb0t/docker-reverse-engineer-anything) · TypeScript · ★ 8 · 1 fork · [docs](https://psyb0t.github.io/docker-reverse-engineer-anything/): REA (Reverse Engineer Anything) in Docker: Android APK decompilation with JADX, Apktool and adb built in, Ghidra on demand, behind a token-guarded Streamable HTTP MCP endpoint. Also stdio MCP and a CLI.
 - [docker-hybrids3](https://github.com/psyb0t/docker-hybrids3) · Shell · ★ 5 · 1 fork · [docs](https://psyb0t.github.io/docker-hybrids3/): Lightweight object storage that speaks S3 (boto3/AWS SDK compatible), plain HTTP, and MCP. SQLite for metadata, flat files on disk.
 - [docker-telethon-plus](https://github.com/psyb0t/docker-telethon-plus) · Python · ★ 5 · 1 fork · [docs](https://psyb0t.github.io/docker-telethon-plus/): Your Telegram account, but it takes HTTP requests. Wraps Telethon, the real MTProto userbot client, not that neutered Bot API garbage, behind a JSON HTTP API and a Model Context Protocol endpoint.
