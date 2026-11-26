@@ -1,5 +1,5 @@
 """Regenerate the profile README: the top repos by stars as pinned-style cards,
-then every public repo listed under its category from categories.json.
+then public repos listed under their category from categories.json.
 
 Run from anywhere; paths resolve from the repository root. Reads GITHUB_TOKEN
 when set (the Actions token is enough, everything read here is public). Writes
@@ -34,6 +34,8 @@ ENV_TOKEN = "GITHUB_TOKEN"
 ENV_USER = "PROFILE_USER"
 DEFAULT_USER = "psyb0t"
 TOP_N = 10
+API_CLIENTS_TITLE = "API clients"
+API_CLIENTS_LIMIT = 10
 
 ROOT = Path(__file__).resolve().parent.parent
 CARDS_DIR = ROOT / "cards"
@@ -369,7 +371,10 @@ def categories_section(categories: list[Category]) -> str:
     blocks = []
     for category in categories:
         lines = [f"{CATEGORY_HEADING} {category.title}", ""]
-        lines += [category_line(r) for r in category.repos]
+        repos = category.repos
+        if category.title == API_CLIENTS_TITLE:
+            repos = repos[:API_CLIENTS_LIMIT]
+        lines += [category_line(repo) for repo in repos]
         blocks.append("\n".join(lines))
     return "\n\n".join(blocks)
 
