@@ -9,7 +9,7 @@
     },
     {
       "title": "Self-hosted AI services",
-      "repos": ["aigate", "docker-talkies", "docker-qwenspeak", "docker-audiolla", "docker-flickies", "docker-predictalot", "decidealot", "chatz", "ollama-chat-party", "cli-llm-chat", "2xbrainz", "torchbase"]
+      "repos": ["aigate", "docker-talkies", "docker-qwenspeak", "docker-audiolla", "docker-flickies", "docker-imagies", "docker-predictalot", "decidealot", "chatz", "ollama-chat-party", "cli-llm-chat", "2xbrainz", "torchbase"]
     },
     {
       "title": "Browser and device automation",
