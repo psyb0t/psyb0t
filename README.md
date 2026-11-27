@@ -30,7 +30,7 @@
 - [chatz](https://github.com/psyb0t/chatz) · Go · ★ 1 · [docs](https://psyb0t.github.io/chatz/): Self-hosted AI chat that deploys as one Go binary. Streaming SSE, OpenAI and Anthropic upstreams, MCP tools, and generative UI that renders live charts and components from model output. Postgres or SQLite.
 - [docker-flickies](https://github.com/psyb0t/docker-flickies) · Python · ★ 1 · 1 fork · [docs](https://psyb0t.github.io/docker-flickies/): Self-hosted video API in one Docker container. Lipsync (LatentSync 1.5, Wav2Lip), face restoration (GFPGAN), ffmpeg ops (trim/concat/transcode/scale/mux/extract/thumbnail/gif), ffprobe metadata, async jobs + webhooks. REST + MCP. CPU + CUDA. Drive from shell, generated Go/Python clients, or LLM agent.
 - [ollama-chat-party](https://github.com/psyb0t/ollama-chat-party) · Python · ★ 1: Multi-user AI-powered RAG beast that lets everyone talk to the same LLM simultaneously!
-- [docker-imagies](https://github.com/psyb0t/docker-imagies) · Python · [docs](https://psyb0t.github.io/docker-imagies/): Self-hosted image API in Docker. Crop, resize, convert, and tile images, match them with CLIP, detect objects with YOLO, and generate images with Stable Diffusion. REST and MCP, CPU and NVIDIA CUDA.
+- [docker-imagies](https://github.com/psyb0t/docker-imagies) · Python · [docs](https://psyb0t.github.io/docker-imagies/): Wrangle your damn images. Crop, resize, convert, tile, match with CLIP, detect with YOLO, and generate with Stable Diffusion. Docker, REST, MCP, CPU and CUDA.
 - [torchbase](https://github.com/psyb0t/torchbase) · Python: Pinned PyTorch CPU and CUDA base images. Build the damn stack once.
 
 ### Browser and device automation
