@@ -9,7 +9,11 @@
     },
     {
       "title": "Self-hosted AI services",
-      "repos": ["aigate", "docker-talkies", "docker-qwenspeak", "docker-audiolla", "docker-flickies", "docker-imagies", "docker-predictalot", "decidealot", "chatz", "ollama-chat-party", "cli-llm-chat", "2xbrainz", "torchbase"]
+      "repos": ["aigate", "docker-talkies", "docker-qwenspeak", "docker-imagies", "docker-predictalot", "decidealot", "chatz", "ollama-chat-party", "cli-llm-chat", "2xbrainz", "torchbase"]
+    },
+    {
+      "title": "Media processing",
+      "repos": ["assctl", "docker-flickies", "docker-audiolla", "docker-mediaproc"]
     },
     {
       "title": "Browser and device automation",
@@ -25,7 +29,7 @@
     },
     {
       "title": "Go libraries and tooling",
-      "repos": ["servicepack", "common-go", "aichteeteapee", "elelem", "essessey", "vibecheck", "go-asyncapi", "ctxerrors", "ctxscope", "slogging", "commander", "goenv", "gonfiguration", "go-config-parser", "procscope", "gofindimpl", "go-workflows", "assctl"]
+      "repos": ["servicepack", "common-go", "aichteeteapee", "elelem", "essessey", "vibecheck", "go-asyncapi", "ctxerrors", "ctxscope", "slogging", "commander", "goenv", "gonfiguration", "go-config-parser", "procscope", "gofindimpl", "go-workflows"]
     },
     {
       "title": "Radio and hardware",
@@ -33,7 +37,7 @@
     },
     {
       "title": "Self-hosted services and MCP servers",
-      "repos": ["docker-mailbox", "docker-modembox", "docker-keepassbox", "docker-telethon-plus", "docker-hybrids3", "docker-proxq", "rankrat", "gitrakz", "docker-mediaproc", "docker-lockbox", "docker-monero", "docker-reverse-engineer-anything"]
+      "repos": ["docker-mailbox", "docker-modembox", "docker-keepassbox", "docker-telethon-plus", "docker-hybrids3", "docker-proxq", "rankrat", "gitrakz", "docker-lockbox", "docker-monero", "docker-reverse-engineer-anything"]
     },
     {
       "title": "Privacy, offline and networking",
